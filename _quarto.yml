@@ -3,9 +3,9 @@ project:
 
 book: 
   page-navigation: true
-  title: "NOAA quarto book" 
-  site-url: "https://nmfs-opensci.github.io/NOAA-quarto-book" 
-  repo-url: "https://github.com/nmfs-opensci/NOAA-quarto-book"
+  title: "Makara Data Submission Guide" 
+  site-url: "https://juliannewilder.github.io/Makara-Data-Submission-Guide/" 
+  repo-url: "https://github.com/juliannewilder/Makara-Data-Submission-Guide"
   repo-actions: [edit, source, issue]
   favicon: assets/favicon.ico
   downloads: [pdf, docx]
@@ -27,14 +27,7 @@ book:
           department: Southwest Fisheries Science Center
   chapters:
     - index.qmd
-    - content/setup.qmd
-    - content/add-content.qmd
-    - content/customizing.qmd
-    - content/rendering.qmd
-    - content/figures_and_tables.qmd
-    - content/code.qmd
-    - content/adding-refs.qmd
-    - content/references.qmd
+    - content/Document_History_and_Revisions.qmd
 
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
@@ -42,8 +35,8 @@ book:
   
   sidebar:
     background: "#D9E3E4"
-    logo: "https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png"
-    favicon: images/favicon.ico
+    logo: images/PAB_LOGO_FINAL_DARKBLUE.PNG
+    favicon: images/PAB_LOGO_FINAL_DARKBLUE.PNG
     pinned: true
     align: center
     tools: 
