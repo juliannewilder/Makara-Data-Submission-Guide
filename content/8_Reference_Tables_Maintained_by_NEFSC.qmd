@@ -3,3 +3,28 @@ title: "8_Reference_Tables_Maintained_by_NEFSC"
 format: html
 ---
 
+## Reference Tables Maintained by NEFSC
+
+NEFSC maintains the reference tables that are listed below. An updated copy of each table can be accessed by downloading the Excel document on the [Passive Acoustic Reporting System Templates](https://www.fisheries.noaa.gov/resource/document/passive-acoustic-reporting-system-templates) webpage. **If a data contributor is submitting data, but does not see the correct or applicable category that they need in one of these tables, they can contact the Makara Database Support Team to request that the category be added.** For example, if the submission includes detection data from an acoustic detector that does not already exist on the Detectors table in Makara, then the data contributor can contact the support team and have the new detector added to the reference table.
+
+|  |  |
+|----|----|
+| **Reference Table** | **Definition** |
+| **Analysis Granularity Types** | The granularity of an analysis (e.g., time-binned intervals, call-by-call events, encounter events) |
+| **Analysis Processing Types** | The processing method of an analysis (e.g., real-time, post-processed) |
+| **Analysis Quality Types** | The analysis quality indicating the level of detection validation (e.g., full, partially, or not validated) |
+| **Behaviors** | The behavior associated with a detection event (e.g., foraging, socializing) |
+| **Call Types** | The unique call/click types associated with one or more sound sources/species (e.g., sperm whale clicks, North Atlantic right whale upcalls) |
+| **Call Type / Sound Sources** | A list of call type codes and sound source codes indicating which call types can be used for which sound sources. This table can be used to find the call types available for a given species by filtering for that species sound_source_code. |
+| **Demographics** | The demographics associated with a detection event (e.g., adult male, female or juvenile) |
+| **Detection Quality Types** | The quality of detection type indicating whether it was validated or not (e.g., unverified, valid) |
+| **Detection Result Types** | The detection result types based on the analysis methods (e.g., detected, possibly detected, not detected) |
+| **Detectors** | The acoustic detector software programs used to process raw acoustic data (e.g., LFDCS, PAMGuard's whistle and moan detector) |
+| **Device Types** | The general types of devices used as part of a deployment (e.g., platforms, hydrophones, recorders, sensors, acoustic releases, gliders, arrays) |
+| **Localization Methods** | The methods used to localize the position of individual sound sources (e.g., DMON real-time tracking, time difference of arrival) |
+| **Localization Depth Methods** | The methods used to localize the depth of individual sound sources (e.g., 3D Simplex, automatic direct reflected time difference of arrival) |
+| **Organizations** | Any organizations that are registered in Makara (e.g., NEFSC, Woods Hole Oceanographic Institution, Cornell University) |
+| **Platform Types** | The types of platforms upon which the hydrophones are mounted (e.g., gliders, moorings) |
+| **Recording Quality Types** | The recording quality types indicate whether a recording is good, compromised, unusable, etc. |
+| **Sensor Variables** | The variables that are measured by a sensor (e.g., temperature) |
+| **Sound Sources** | Specific biological, anthropogenic, environmental, or unknown sound sources (e.g., North Atlantic right whale, recreational vessel, rain) |
