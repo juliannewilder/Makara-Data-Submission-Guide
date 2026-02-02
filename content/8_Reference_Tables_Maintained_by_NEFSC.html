@@ -288,8 +288,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#reference-tables-maintained-by-nefsc" id="toc-reference-tables-maintained-by-nefsc" class="nav-link active" data-scroll-target="#reference-tables-maintained-by-nefsc"><span class="header-section-number">8.1</span> Reference Tables Maintained by NEFSC</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/edit/main/content/8_Reference_Tables_Maintained_by_NEFSC.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/blob/main/content/8_Reference_Tables_Maintained_by_NEFSC.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -313,8 +319,96 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="reference-tables-maintained-by-nefsc" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="reference-tables-maintained-by-nefsc"><span class="header-section-number">8.1</span> Reference Tables Maintained by NEFSC</h2>
+<p>NEFSC maintains the reference tables that are listed below. An updated copy of each table can be accessed by downloading the Excel document on the <a href="https://www.fisheries.noaa.gov/resource/document/passive-acoustic-reporting-system-templates">Passive Acoustic Reporting System Templates</a> webpage. <strong>If a data contributor is submitting data, but does not see the correct or applicable category that they need in one of these tables, they can contact the Makara Database Support Team to request that the category be added.</strong> For example, if the submission includes detection data from an acoustic detector that does not already exist on the Detectors table in Makara, then the data contributor can contact the support team and have the new detector added to the reference table.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Reference Table</strong></td>
+<td><strong>Definition</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Analysis Granularity Types</strong></td>
+<td>The granularity of an analysis (e.g., time-binned intervals, call-by-call events, encounter events)</td>
+</tr>
+<tr class="odd">
+<td><strong>Analysis Processing Types</strong></td>
+<td>The processing method of an analysis (e.g., real-time, post-processed)</td>
+</tr>
+<tr class="even">
+<td><strong>Analysis Quality Types</strong></td>
+<td>The analysis quality indicating the level of detection validation (e.g., full, partially, or not validated)</td>
+</tr>
+<tr class="odd">
+<td><strong>Behaviors</strong></td>
+<td>The behavior associated with a detection event (e.g., foraging, socializing)</td>
+</tr>
+<tr class="even">
+<td><strong>Call Types</strong></td>
+<td>The unique call/click types associated with one or more sound sources/species (e.g., sperm whale clicks, North Atlantic right whale upcalls)</td>
+</tr>
+<tr class="odd">
+<td><strong>Call Type / Sound Sources</strong></td>
+<td>A list of call type codes and sound source codes indicating which call types can be used for which sound sources. This table can be used to find the call types available for a given species by filtering for that species sound_source_code.</td>
+</tr>
+<tr class="even">
+<td><strong>Demographics</strong></td>
+<td>The demographics associated with a detection event (e.g., adult male, female or juvenile)</td>
+</tr>
+<tr class="odd">
+<td><strong>Detection Quality Types</strong></td>
+<td>The quality of detection type indicating whether it was validated or not (e.g., unverified, valid)</td>
+</tr>
+<tr class="even">
+<td><strong>Detection Result Types</strong></td>
+<td>The detection result types based on the analysis methods (e.g., detected, possibly detected, not detected)</td>
+</tr>
+<tr class="odd">
+<td><strong>Detectors</strong></td>
+<td>The acoustic detector software programs used to process raw acoustic data (e.g., LFDCS, PAMGuard’s whistle and moan detector)</td>
+</tr>
+<tr class="even">
+<td><strong>Device Types</strong></td>
+<td>The general types of devices used as part of a deployment (e.g., platforms, hydrophones, recorders, sensors, acoustic releases, gliders, arrays)</td>
+</tr>
+<tr class="odd">
+<td><strong>Localization Methods</strong></td>
+<td>The methods used to localize the position of individual sound sources (e.g., DMON real-time tracking, time difference of arrival)</td>
+</tr>
+<tr class="even">
+<td><strong>Localization Depth Methods</strong></td>
+<td>The methods used to localize the depth of individual sound sources (e.g., 3D Simplex, automatic direct reflected time difference of arrival)</td>
+</tr>
+<tr class="odd">
+<td><strong>Organizations</strong></td>
+<td>Any organizations that are registered in Makara (e.g., NEFSC, Woods Hole Oceanographic Institution, Cornell University)</td>
+</tr>
+<tr class="even">
+<td><strong>Platform Types</strong></td>
+<td>The types of platforms upon which the hydrophones are mounted (e.g., gliders, moorings)</td>
+</tr>
+<tr class="odd">
+<td><strong>Recording Quality Types</strong></td>
+<td>The recording quality types indicate whether a recording is good, compromised, unusable, etc.</td>
+</tr>
+<tr class="even">
+<td><strong>Sensor Variables</strong></td>
+<td>The variables that are measured by a sensor (e.g., temperature)</td>
+</tr>
+<tr class="odd">
+<td><strong>Sound Sources</strong></td>
+<td>Specific biological, anthropogenic, environmental, or unknown sound sources (e.g., North Atlantic right whale, recreational vessel, rain)</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -737,7 +831,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/edit/main/content/8_Reference_Tables_Maintained_by_NEFSC.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/blob/main/content/8_Reference_Tables_Maintained_by_NEFSC.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/edit/main/content/8_Reference_Tables_Maintained_by_NEFSC.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/blob/main/content/8_Reference_Tables_Maintained_by_NEFSC.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

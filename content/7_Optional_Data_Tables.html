@@ -288,8 +288,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#optional-data-tables-recommendedrequired-if-applicable" id="toc-optional-data-tables-recommendedrequired-if-applicable" class="nav-link active" data-scroll-target="#optional-data-tables-recommendedrequired-if-applicable"><span class="header-section-number">7.1</span> Optional Data Tables (Recommended/Required if Applicable)</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/edit/main/content/7_Optional_Data_Tables.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/blob/main/content/7_Optional_Data_Tables.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -313,8 +319,66 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="optional-data-tables-recommendedrequired-if-applicable" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="optional-data-tables-recommendedrequired-if-applicable"><span class="header-section-number">7.1</span> Optional Data Tables (Recommended/Required if Applicable)</h2>
+<p>The following tables are optional for any data submission as long as the desired categories already exist in the database. For each table, the data needs to be submitted only once. For example, if a device has already been submitted with a deployment, and then referenced by a deployment that is submitted later, then the Device table including that device does not need to be included in the second submission as it will already exist in Makara.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Data Table</strong></td>
+<td><strong>Definition</strong></td>
+<td><strong>If/When to Submit</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Devices</strong></td>
+<td>A specific piece of equipment used as part of a deployment (e.g., platforms, hydrophones, recorders, sensors, acoustic releases, gliders, arrays)</td>
+<td>If there are new devices that are not already in Makara</td>
+</tr>
+<tr class="odd">
+<td><strong>Projects</strong></td>
+<td>A group of deployments</td>
+<td>If multiple deployments are submitted that the data contributor would like to have grouped together, or if new deployments are submitted that should be grouped with deployments that are already in Makara. If a project was already created with previously submitted deployment(s) and there are new deployments to be added to that project, then another Project table does not need to be submitted.</td>
+</tr>
+<tr class="even">
+<td><strong>Sites</strong></td>
+<td>The fixed location(s) where recordings were made over the course of one or more deployments, or general region for mobile deployments</td>
+<td>If there are new deployment sites that are not already in Makara</td>
+</tr>
+<tr class="odd">
+<td><strong>Recording Intervals</strong></td>
+<td>The range of time and/or frequencies with compromised or invalid audio (this table is not for tracking duty cycled data)</td>
+<td>If a deployment has periods of compromised data (duty cycling is accounted for in the Recordings table, not the Recording Intervals table)</td>
+</tr>
+<tr class="even">
+<td><strong>Sensor Datasets</strong></td>
+<td>Metadata about the collection of sensor readings (e.g., temperatures)</td>
+<td>If sensor data (e.g., temperatures) were collected on the deployment</td>
+</tr>
+<tr class="odd">
+<td><strong>Sensor Values</strong></td>
+<td>The timestamped sensor readings belonging to a Sensor Dataset</td>
+<td>If sensor data (e.g., temperatures) were collected on the deployment</td>
+</tr>
+<tr class="even">
+<td><strong>Tracks</strong></td>
+<td>Metadata about the collection of track data (e.g., position, speed, and other variables) associated with a mobile platform</td>
+<td>If a mobile deployment is submitted</td>
+</tr>
+<tr class="odd">
+<td><strong>Track Positions</strong></td>
+<td>The instantaneous timestamped location, speed, etc. along the track of a mobile platform</td>
+<td>If a mobile deployment is submitted</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -737,7 +801,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/edit/main/content/7_Optional_Data_Tables.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/blob/main/content/7_Optional_Data_Tables.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/edit/main/content/7_Optional_Data_Tables.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/blob/main/content/7_Optional_Data_Tables.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

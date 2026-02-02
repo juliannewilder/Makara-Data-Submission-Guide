@@ -288,8 +288,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#data-type-formatting-instructions" id="toc-data-type-formatting-instructions" class="nav-link active" data-scroll-target="#data-type-formatting-instructions"><span class="header-section-number">9.1</span> Data Type Formatting Instructions</a>
+  <ul class="collapse">
+  <li><a href="#javascript-object-notation-json-instructions" id="toc-javascript-object-notation-json-instructions" class="nav-link" data-scroll-target="#javascript-object-notation-json-instructions"><span class="header-section-number">9.1.1</span> JavaScript Object Notation (JSON) Instructions</a></li>
+  <li><a href="#when-to-use-json-fields" id="toc-when-to-use-json-fields" class="nav-link" data-scroll-target="#when-to-use-json-fields"><span class="header-section-number">9.1.2</span> When to Use JSON Fields</a></li>
+  <li><a href="#what-is-json" id="toc-what-is-json" class="nav-link" data-scroll-target="#what-is-json"><span class="header-section-number">9.1.3</span> What is JSON?</a></li>
+  <li><a href="#example-json-structures" id="toc-example-json-structures" class="nav-link" data-scroll-target="#example-json-structures"><span class="header-section-number">9.1.4</span> Example JSON Structures</a></li>
+  <li><a href="#recommended-guidelines" id="toc-recommended-guidelines" class="nav-link" data-scroll-target="#recommended-guidelines"><span class="header-section-number">9.1.5</span> Recommended Guidelines</a></li>
+  <li><a href="#tips-for-working-with-json-in-spreadsheets" id="toc-tips-for-working-with-json-in-spreadsheets" class="nav-link" data-scroll-target="#tips-for-working-with-json-in-spreadsheets"><span class="header-section-number">9.1.6</span> Tips for Working with JSON in Spreadsheets</a></li>
+  <li><a href="#consistency-is-critical" id="toc-consistency-is-critical" class="nav-link" data-scroll-target="#consistency-is-critical"><span class="header-section-number">9.1.7</span> Consistency is Critical</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/edit/main/content/9_Data_Type_Formatting_Instructions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/blob/main/content/9_Data_Type_Formatting_Instructions.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -313,8 +328,169 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="data-type-formatting-instructions" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="data-type-formatting-instructions"><span class="header-section-number">9.1</span> Data Type Formatting Instructions</h2>
+<p>Some fields on the data table templates require specific formatting when entering values.</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><strong>Data Type</strong></td>
+<td><strong>Required Formatting</strong></td>
+<td><strong>Examples</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Boolean</strong></td>
+<td>TRUE or FALSE</td>
+<td>TRUE</td>
+</tr>
+<tr class="odd">
+<td><strong>Code</strong></td>
+<td>Uppercase letters, numbers, underscores (_), and dashes (-) only (no spaces, lowercase letters, or other symbols)</td>
+<td>“NEFSC_MA-RI_202202_COX01”,<br>
+“SOUNDTRAP-53423”</td>
+</tr>
+<tr class="even">
+<td><strong>Code List</strong></td>
+<td>Comma-separated list of Codes within a single string</td>
+<td>“SOUNDTRAP-53423,VEMCO-9867,FPOD-12355”</td>
+</tr>
+<tr class="odd">
+<td><strong>Date</strong></td>
+<td>Date as “YYYY-MM-DD”</td>
+<td>“2025-03-26”</td>
+</tr>
+<tr class="even">
+<td><strong>Float</strong></td>
+<td>Decimal number</td>
+<td>72.56281</td>
+</tr>
+<tr class="odd">
+<td><strong>Integer</strong></td>
+<td>Integer number</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><strong>JSON</strong></td>
+<td>Valid JavaScript Object Notation (JSON) for storing structured data objects and arrays (see <a href="https://docs.google.com/document/d/1VDhnr32qz6CCZEFEneOjSFs1QwamMF5LCqdsc4ok6KU/edit?tab=t.0#heading=h.nvnxglslgbdn">JSON Instructions</a>)</td>
+<td>{ “KEY”: “VALUE”, “KEY”: [1, 2, 3, …], … }</td>
+</tr>
+<tr class="odd">
+<td><strong>Text</strong></td>
+<td>Text string (no character limit)</td>
+<td>“Recorder lost at sea”</td>
+</tr>
+<tr class="even">
+<td><strong>Timestamp</strong></td>
+<td><p>Date and time in one of the following ISO-8601 formats (seconds and milliseconds are optional), must include timezone suffix (use ‘Z’ for UTC):</p>
+<p>“YYYY-MM-DDTHH:MMZ”</p>
+<p>“YYYY-MM-DDTHH:MM:SS±HH”</p>
+<p>“YYYY-MM-DDTHH:MM:SS±HHMM”</p>
+<p>“YYYY-MM-DDTHH:MM:SS.SSS±HHMM”</p></td>
+<td><p><br>
+<br>
+“2025-03-26T15:34Z”</p>
+<p>“2025-03-26T15:34:27+04”</p>
+<p>“2025-03-26T15:34:27-0500”</p>
+<p>“2025-03-26T15:34:27.921-0500”</p></td>
+</tr>
+<tr class="odd">
+<td><strong>Timezone</strong></td>
+<td><p>Timezone as UTC offset in one of the following formats:</p>
+<p>“UTC”</p>
+<p>“UTC±H”</p>
+<p>“UTC±HH”</p>
+<p>“UTC±HHMM”</p></td>
+<td><p><br>
+“UTC”</p>
+<p>“UTC+4”</p>
+<p>“UTC+04”</p>
+<p>“UTC-0500”</p></td>
+</tr>
+<tr class="even">
+<td><strong>URI</strong></td>
+<td>Valid Uniform Resource Indicator (URI) address for files in cloud storage. Must start with the protocol (e.g., “gs://” for Google Cloud buckets), followed by the bucket name, and then path to the file within the bucket.</td>
+<td>“gs://nefsc-1/bottom_mounted/NEFSC_GOM/NEFSC_GOM_200410/NEFSC_GOM_200410_PU05”</td>
+</tr>
+<tr class="odd">
+<td><strong>URL</strong></td>
+<td>Valid Uniform Resource Locator (URL) address for web page</td>
+<td>“https://dcs.whoi.edu/gom2412/gom2412_we14.shtml”</td>
+</tr>
+</tbody>
+</table>
+<section id="javascript-object-notation-json-instructions" class="level3" data-number="9.1.1">
+<h3 data-number="9.1.1" class="anchored" data-anchor-id="javascript-object-notation-json-instructions"><span class="header-section-number">9.1.1</span> JavaScript Object Notation (JSON) Instructions</h3>
+<p>JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write and for machines to parse and generate. In Makara, several fields are designated as JSON type to store structured data that doesn’t fit well into standard columns. For example, information about device calibration, channel maps, and detector settings can all be stored as JSON for loading directly into other software.</p>
+</section>
+<section id="when-to-use-json-fields" class="level3" data-number="9.1.2">
+<h3 data-number="9.1.2" class="anchored" data-anchor-id="when-to-use-json-fields"><span class="header-section-number">9.1.2</span> When to Use JSON Fields</h3>
+<p>The JSON fields are primarily intended to be used in the following situations:</p>
+<ul>
+<li><p>To store structured data that benefits from consistent data structures (e.g., calibration tables)&nbsp;</p></li>
+<li><p>When you need the data to be directly queryable within the database</p></li>
+<li><p>When the data can be read or processed directly by other software applications</p></li>
+</ul>
+<p>JSON is particularly valuable for device specifications, channel mappings, calibration data, and complex configuration settings. However, if your additional information is primarily free-text notes or simple comments that don’t require structured querying or programmatic access, NEFSC recommends using the standard comments field available in each table instead. The comments fields are simpler to fill out, don’t require special formatting, and are better suited for human-readable annotations that don’t need computational processing.</p>
+</section>
+<section id="what-is-json" class="level3" data-number="9.1.3">
+<h3 data-number="9.1.3" class="anchored" data-anchor-id="what-is-json"><span class="header-section-number">9.1.3</span> What is JSON?</h3>
+<p>JSON consists of two primary structures:</p>
+<ul>
+<li><p><strong>Objects</strong>: Collections of key-value pairs enclosed in curly braces { }. Each key must be a string in double quotes, followed by a colon :, and then a value. Example: { “DETECTOR_THRESHOLD”: 0.75 }</p></li>
+<li><p><strong>Arrays</strong>: Ordered lists of values enclosed in square brackets [ ]. Example: [ 0.5, 0.75, 0.9 ]</p></li>
+</ul>
+<p>Values in JSON can be:</p>
+<ul>
+<li><p><strong>Strings</strong>: Text in double quotes “example”</p></li>
+<li><p><strong>Numbers</strong>: Integers or decimals without quotes 42 or 3.14</p></li>
+<li><p><strong>Booleans</strong>: true or false (lowercase, without quotes)</p></li>
+<li><p><strong>null</strong>: Represented as null (without quotes)</p></li>
+</ul>
+<p>There are no specific formats required for dates and timestamps. However, NEFSC recommends using the same formats listed in the <a href="https://docs.google.com/document/d/1VDhnr32qz6CCZEFEneOjSFs1QwamMF5LCqdsc4ok6KU/edit?tab=t.0#heading=h.dvg5q57emyub">Data Type Formatting Instructions</a> table based on the ISO8601 standard (e.g., { “date”: “2025-03-20”, “datetime”: “2025-03-26T15:34:27Z” }).</p>
+</section>
+<section id="example-json-structures" class="level3" data-number="9.1.4">
+<h3 data-number="9.1.4" class="anchored" data-anchor-id="example-json-structures"><span class="header-section-number">9.1.4</span> Example JSON Structures</h3>
+<p>Simple object for the sensitivity of a recorder:</p>
+<pre><code>{ "SENSITIVITY": -1.8 }</code></pre>
+<p>Nested object for the high and low gain sensitivities of a recorder:</p>
+<pre><code>{ "GAIN": { "HIGH": 177.4, "LOW": 189.9 } }</code></pre>
+<p>Object with nested array for the sensitivity calibration of a hydrophone:</p>
+<p>{ “SENSITIVITIES”: [-170.1, -169.8, -170.2], “CALIBRATION_DATE”: “2023-05-15”}</p>
+<p>Complex nested structure containing a calibration frequency table represented as an array of objects where each object within the array is a row in the table:</p>
+<p>{</p>
+<p>“FREQ_TABLE”: [</p>
+<p>{ “FREQ_HZ”: 1, “GAIN_DB”: 10.6 },</p>
+<p>{ “FREQ_HZ”: 2, “GAIN_DB”: 20.3 },</p>
+<p>{ “FREQ_HZ”: 5, “GAIN_DB”: 35.8 },</p>
+<p>{ “FREQ_HZ”: 10, “GAIN_DB”: 47.9 },</p>
+<p>etc…</p>
+<p>]</p>
+<p>}</p>
+</section>
+<section id="recommended-guidelines" class="level3" data-number="9.1.5">
+<h3 data-number="9.1.5" class="anchored" data-anchor-id="recommended-guidelines"><span class="header-section-number">9.1.5</span> Recommended Guidelines</h3>
+<p>NEFSC recommends adhering to the following guidelines when creating JSON data for submission to Makara. Please note these are only guidelines, not requirements. The only requirement for these fields is that the data is in valid JSON format.</p>
+<ul>
+<li><p>Each entry in a JSON field should be an object at the top level, not an array or individual value so that all values have a key specifying what they are (e.g., use “{”SENSITIVITIES”: [-170.1, -169.8, -170.2] }” instead of just the array of values “[-170.1, -169.8, -170.2]”</p></li>
+<li><p>Always use uppercase letters for object keys to avoid changes in case across rows (e.g., { “HIGH”: 177.4 } and { “high”: 177.4 } are not compatible)</p></li>
+<li><p>Do not wrap numeric values in double quotes, leave them as numbers (e.g., { “HIGH”: 177.4 } instead of { “HIGH”: “177.4” })</p></li>
+</ul>
+</section>
+<section id="tips-for-working-with-json-in-spreadsheets" class="level3" data-number="9.1.6">
+<h3 data-number="9.1.6" class="anchored" data-anchor-id="tips-for-working-with-json-in-spreadsheets"><span class="header-section-number">9.1.6</span> Tips for Working with JSON in Spreadsheets</h3>
+<ul>
+<li><p>Create your JSON in a text editor or JSON validator first to ensure proper formatting</p></li>
+<li><p>For complex JSON structures, consider using a JSON validation tool (like <a href="http://jsonlint.com">jsonlint.com</a>) before pasting into your spreadsheet</p></li>
+<li><p>Keep JSON structures as simple as possible while still capturing the necessary data</p></li>
+</ul>
+</section>
+<section id="consistency-is-critical" class="level3" data-number="9.1.7">
+<h3 data-number="9.1.7" class="anchored" data-anchor-id="consistency-is-critical"><span class="header-section-number">9.1.7</span> Consistency is Critical</h3>
+<p>It is the responsibility of the data contributor to adhere to consistent structures (aka schema) within the JSON field of each table. This is critical for ensuring data integrity and usability, and so JSON data can be readily combined across multiple rows in a given table. While NEFSC provides some example formats for each JSON field in this guide, each data contributor can develop their own JSON schema that aligns with their software and workflow.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -737,7 +913,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/edit/main/content/9_Data_Type_Formatting_Instructions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/blob/main/content/9_Data_Type_Formatting_Instructions.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/edit/main/content/9_Data_Type_Formatting_Instructions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/blob/main/content/9_Data_Type_Formatting_Instructions.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
