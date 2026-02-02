@@ -8,5 +8,75 @@
     "crumbs": [
       "Executive Summary"
     ]
+  },
+  {
+    "objectID": "content/1_General_Information.html",
+    "href": "content/1_General_Information.html",
+    "title": "1  General_Information",
+    "section": "",
+    "text": "1.1 General Information\nThis guide provides data contributors with instructions, field definitions, and examples for how to enter acoustic data and metadata into the template tables and submit them for archiving in the Northeast Fisheries Science Center’s (NEFSC) Makara Database. Data that are archived in Makara may also be displayed on the Passive Acoustic Cetacean Map (PACM), with permission from the data owner(s).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>General_Information</span>"
+    ]
+  },
+  {
+    "objectID": "content/2_Document_History_and_Revisions.html",
+    "href": "content/2_Document_History_and_Revisions.html",
+    "title": "2  2_Document_History_and_Revisions",
+    "section": "",
+    "text": "2.1 Document History and Revisions",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>2_Document_History_and_Revisions</span>"
+    ]
+  },
+  {
+    "objectID": "content/2_Document_History_and_Revisions.html#document-history-and-revisions",
+    "href": "content/2_Document_History_and_Revisions.html#document-history-and-revisions",
+    "title": "2  2_Document_History_and_Revisions",
+    "section": "",
+    "text": "Version\nDate\nAuthor\nDescription\n\n\n1.0\nMay 1, 2025\nJulianne Wilder\nDocument Created\n\n\n1.1\nJune 10, 2025\nJeffrey Walker\nUpdated “Data Table Template Instructions” to clarify that filenames and folder structure must match “templates” sub-directory.\n\n\n1.2\nAugust 26, 2025\nJeffrey Walker\n\nRenamed the organization_code to deployment_organization_code in the analyses and detections tables to clarify that this field refers to the organization that owns the deployment. Also added analysis_organization_code to the detections table. Both tables now include both the deployment_organization_code (organization that the deployment and recording(s) belong to), and analysis_organization_code (organization that the analysis belongs to).\nAdded track_uri to tracks table for linking tracks to external files in cloud storage (useful for linking track metadata to high resolution data not stored in makara)\nFixed minor typos\n\n\n\n1.3\nOctober 7, 2025\nJeffrey Walker\n\nClarified that deployments, recordings, analyses and detections are the primary data tables, but not always required for each submission\nAdded Sensor Datasets and Sensor Values templates\nAdded deployment_realtime and deployment_url fields\nUpdated JSON guidelines and examples\nSet default value for recording_n_channels to 1\nFixed analysis_processing_types to have values of POST_PROCESSEDandREAL_TIME(underscores instead of dashes)\nClarified descriptions of analysis_release_data and analysis_release_pacm",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>2_Document_History_and_Revisions</span>"
+    ]
+  },
+  {
+    "objectID": "content/3_Contact_Information_for_the_Makara_Database_Support_Team.html",
+    "href": "content/3_Contact_Information_for_the_Makara_Database_Support_Team.html",
+    "title": "3  Contact_Information_for_the_Makara_Database_Support_Team",
+    "section": "",
+    "text": "3.1 Contact Information for the Makara Database Support Team\nIf you have questions or issues regarding your data submission, please contact nmfs.nec.pamdata@noaa.gov.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Contact_Information_for_the_Makara_Database_Support_Team</span>"
+    ]
+  },
+  {
+    "objectID": "content/4_Tips_and_Recommendations.html",
+    "href": "content/4_Tips_and_Recommendations.html",
+    "title": "4  4_Tips_and_Recommendations",
+    "section": "",
+    "text": "4.1 Tips and Recommendations",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>4_Tips_and_Recommendations</span>"
+    ]
+  },
+  {
+    "objectID": "content/4_Tips_and_Recommendations.html#tips-and-recommendations",
+    "href": "content/4_Tips_and_Recommendations.html#tips-and-recommendations",
+    "title": "4  4_Tips_and_Recommendations",
+    "section": "",
+    "text": "Timezones/Timestamps: All timestamps that are entered into the data submission templates should include the timezone (even if they are in UTC; e.g., 2023-10-12T18:09:05+0000). The NEFSC generally recommends that all recordings are made in UTC. Other timezones are okay, so long as the timezone information is included within the timestamp (e.g., 2023-10-12T18:09:05+0500 to indicate that the audio was recorded in Eastern Standard Time).\nScenarios and Examples: It is highly recommended that data contributors look through our Scenarios section and the ‘examples’ template folder in the downloadable zipped folder on the Passive Acoustic Reporting System Templates webpage prior to entering their data into the data submission templates. There may be an example that is similar to their situation.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>4_Tips_and_Recommendations</span>"
+    ]
+  },
+  {
+    "objectID": "content/5_Data_Table_Template_Instructions.html",
+    "href": "content/5_Data_Table_Template_Instructions.html",
+    "title": "5  5_Data_Table_Template_Instructions",
+    "section": "",
+    "text": "5.1 Data Table Template Instructions\nTo submit data and metadata to the Makara database, the information must be organized into template tables. The data template tables and example tables are provided in a downloadable zipped folder on the Passive Acoustic Reporting System Templates webpage, and are described in more detail below. Some of the tables are required, but do not necessarily need to be submitted at the same time. Other tables are optional, but it is highly recommended that the data contributor fills out any tables that are applicable to their deployment(s). Within each table, there are required and optional (but recommended if applicable) fields. The required tables/fields are the bare minimum of what metadata should be submitted.\nWithin the template zipped folder is a sub-directory named “templates/”. This sub-directory contains empty CSV files that can be used as starting templates for filling out each table. Each data submission should contain one or more of these CSV files with data rows properly entered based on the formats described below. The names of each CSV file as well as the folder structure must match what is in the templates folder. Data cannot be submitted as an Excel Workbook (*.xlsx file).",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>5_Data_Table_Template_Instructions</span>"
+    ]
   }
 ]
