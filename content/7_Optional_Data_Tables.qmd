@@ -3,3 +3,18 @@ title: "7_Optional_Data_Tables"
 format: html
 ---
 
+## Optional Data Tables (Recommended/Required if Applicable)
+
+The following tables are optional for any data submission as long as the desired categories already exist in the database. For each table, the data needs to be submitted only once. For example, if a device has already been submitted with a deployment, and then referenced by a deployment that is submitted later, then the Device table including that device does not need to be included in the second submission as it will already exist in Makara.
+
+|  |  |  |
+|----|----|----|
+| **Data Table** | **Definition** | **If/When to Submit** |
+| **Devices** | A specific piece of equipment used as part of a deployment (e.g., platforms, hydrophones, recorders, sensors, acoustic releases, gliders, arrays) | If there are new devices that are not already in Makara |
+| **Projects** | A group of deployments | If multiple deployments are submitted that the data contributor would like to have grouped together, or if new deployments are submitted that should be grouped with deployments that are already in Makara. If a project was already created with previously submitted deployment(s) and there are new deployments to be added to that project, then another Project table does not need to be submitted. |
+| **Sites** | The fixed location(s) where recordings were made over the course of one or more deployments, or general region for mobile deployments | If there are new deployment sites that are not already in Makara |
+| **Recording Intervals** | The range of time and/or frequencies with compromised or invalid audio (this table is not for tracking duty cycled data) | If a deployment has periods of compromised data (duty cycling is accounted for in the Recordings table, not the Recording Intervals table) |
+| **Sensor Datasets** | Metadata about the collection of sensor readings (e.g., temperatures) | If sensor data (e.g., temperatures) were collected on the deployment |
+| **Sensor Values** | The timestamped sensor readings belonging to a Sensor Dataset | If sensor data (e.g., temperatures) were collected on the deployment |
+| **Tracks** | Metadata about the collection of track data (e.g., position, speed, and other variables) associated with a mobile platform | If a mobile deployment is submitted |
+| **Track Positions** | The instantaneous timestamped location, speed, etc. along the track of a mobile platform | If a mobile deployment is submitted |
