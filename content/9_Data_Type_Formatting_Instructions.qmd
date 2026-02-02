@@ -3,3 +3,147 @@ title: "9_Data_Type_Formatting_Instructions"
 format: html
 ---
 
+## Data Type Formatting Instructions
+
+Some fields on the data table templates require specific formatting when entering values.
+
++---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| **Data Type** | **Required Formatting**                                                                                                                                                                                                               | **Examples**                                                                   |
++---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| **Boolean**   | TRUE or FALSE                                                                                                                                                                                                                         | TRUE                                                                           |
++---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| **Code**      | Uppercase letters, numbers, underscores (\_), and dashes (-) only (no spaces, lowercase letters, or other symbols)                                                                                                                    | “NEFSC_MA-RI_202202_COX01”,\                                                   |
+|               |                                                                                                                                                                                                                                       | “SOUNDTRAP-53423”                                                              |
++---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| **Code List** | Comma-separated list of Codes within a single string                                                                                                                                                                                  | “SOUNDTRAP-53423,VEMCO-9867,FPOD-12355”                                        |
++---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| **Date**      | Date as "YYYY-MM-DD"                                                                                                                                                                                                                  | "2025-03-26"                                                                   |
++---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| **Float**     | Decimal number                                                                                                                                                                                                                        | 72.56281                                                                       |
++---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| **Integer**   | Integer number                                                                                                                                                                                                                        | 1                                                                              |
++---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| **JSON**      | Valid JavaScript Object Notation (JSON) for storing structured data objects and arrays (see [JSON Instructions](https://docs.google.com/document/d/1VDhnr32qz6CCZEFEneOjSFs1QwamMF5LCqdsc4ok6KU/edit?tab=t.0#heading=h.nvnxglslgbdn)) | { "KEY": "VALUE", "KEY": \[1, 2, 3, ...\], ... }                               |
++---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| **Text**      | Text string (no character limit)                                                                                                                                                                                                      | "Recorder lost at sea"                                                         |
++---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| **Timestamp** | Date and time in one of the following ISO-8601 formats (seconds and milliseconds are optional), must include timezone suffix (use 'Z' for UTC):                                                                                       | \                                                                              |
+|               |                                                                                                                                                                                                                                       | \                                                                              |
+|               | "YYYY-MM-DDTHH:MMZ"                                                                                                                                                                                                                   | "2025-03-26T15:34Z"                                                            |
+|               |                                                                                                                                                                                                                                       |                                                                                |
+|               | "YYYY-MM-DDTHH:MM:SS±HH"                                                                                                                                                                                                              | "2025-03-26T15:34:27+04"                                                       |
+|               |                                                                                                                                                                                                                                       |                                                                                |
+|               | "YYYY-MM-DDTHH:MM:SS±HHMM"                                                                                                                                                                                                            | "2025-03-26T15:34:27-0500"                                                     |
+|               |                                                                                                                                                                                                                                       |                                                                                |
+|               | "YYYY-MM-DDTHH:MM:SS.SSS±HHMM"                                                                                                                                                                                                        | "2025-03-26T15:34:27.921-0500"                                                 |
++---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| **Timezone**  | Timezone as UTC offset in one of the following formats:                                                                                                                                                                               | \                                                                              |
+|               |                                                                                                                                                                                                                                       | "UTC"                                                                          |
+|               | "UTC"                                                                                                                                                                                                                                 |                                                                                |
+|               |                                                                                                                                                                                                                                       | "UTC+4"                                                                        |
+|               | "UTC±H"                                                                                                                                                                                                                               |                                                                                |
+|               |                                                                                                                                                                                                                                       | "UTC+04"                                                                       |
+|               | "UTC±HH"                                                                                                                                                                                                                              |                                                                                |
+|               |                                                                                                                                                                                                                                       | "UTC-0500"                                                                     |
+|               | "UTC±HHMM"                                                                                                                                                                                                                            |                                                                                |
++---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| **URI**       | Valid Uniform Resource Indicator (URI) address for files in cloud storage. Must start with the protocol (e.g., “gs://” for Google Cloud buckets), followed by the bucket name, and then path to the file within the bucket.           | "gs://nefsc-1/bottom_mounted/NEFSC_GOM/NEFSC_GOM_200410/NEFSC_GOM_200410_PU05" |
++---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| **URL**       | Valid Uniform Resource Locator (URL) address for web page                                                                                                                                                                             | "https://dcs.whoi.edu/gom2412/gom2412_we14.shtml"                              |
++---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+
+### JavaScript Object Notation (JSON) Instructions
+
+JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write and for machines to parse and generate. In Makara, several fields are designated as JSON type to store structured data that doesn't fit well into standard columns. For example, information about device calibration, channel maps, and detector settings can all be stored as JSON for loading directly into other software.
+
+### When to Use JSON Fields
+
+The JSON fields are primarily intended to be used in the following situations:
+
+-   To store structured data that benefits from consistent data structures (e.g., calibration tables) 
+
+-   When you need the data to be directly queryable within the database
+
+-   When the data can be read or processed directly by other software applications
+
+JSON is particularly valuable for device specifications, channel mappings, calibration data, and complex configuration settings. However, if your additional information is primarily free-text notes or simple comments that don't require structured querying or programmatic access, NEFSC recommends using the standard comments field available in each table instead. The comments fields are simpler to fill out, don't require special formatting, and are better suited for human-readable annotations that don't need computational processing.
+
+### What is JSON?
+
+JSON consists of two primary structures:
+
+-   **Objects**: Collections of key-value pairs enclosed in curly braces { }. Each key must be a string in double quotes, followed by a colon :, and then a value. Example: { "DETECTOR_THRESHOLD": 0.75 }
+
+-   **Arrays**: Ordered lists of values enclosed in square brackets \[ \]. Example: \[ 0.5, 0.75, 0.9 \]
+
+Values in JSON can be:
+
+-   **Strings**: Text in double quotes "example"
+
+-   **Numbers**: Integers or decimals without quotes 42 or 3.14
+
+-   **Booleans**: true or false (lowercase, without quotes)
+
+-   **null**: Represented as null (without quotes)
+
+There are no specific formats required for dates and timestamps. However, NEFSC recommends using the same formats listed in the [Data Type Formatting Instructions](https://docs.google.com/document/d/1VDhnr32qz6CCZEFEneOjSFs1QwamMF5LCqdsc4ok6KU/edit?tab=t.0#heading=h.dvg5q57emyub) table based on the ISO8601 standard (e.g., { "date": "2025-03-20", "datetime": "2025-03-26T15:34:27Z" }).
+
+### Example JSON Structures
+
+Simple object for the sensitivity of a recorder:
+
+```         
+{ "SENSITIVITY": -1.8 }
+```
+
+Nested object for the high and low gain sensitivities of a recorder:
+
+```         
+{ "GAIN": { "HIGH": 177.4, "LOW": 189.9 } }
+```
+
+Object with nested array for the sensitivity calibration of a hydrophone:
+
+{ "SENSITIVITIES": \[-170.1, -169.8, -170.2\], "CALIBRATION_DATE": "2023-05-15"}
+
+Complex nested structure containing a calibration frequency table represented as an array of objects where each object within the array is a row in the table:
+
+{
+
+"FREQ_TABLE": \[
+
+{ "FREQ_HZ": 1, "GAIN_DB": 10.6 },
+
+{ "FREQ_HZ": 2, "GAIN_DB": 20.3 },
+
+{ "FREQ_HZ": 5, "GAIN_DB": 35.8 },
+
+{ "FREQ_HZ": 10, "GAIN_DB": 47.9 },
+
+etc...
+
+\]
+
+}
+
+### Recommended Guidelines
+
+NEFSC recommends adhering to the following guidelines when creating JSON data for submission to Makara. Please note these are only guidelines, not requirements. The only requirement for these fields is that the data is in valid JSON format.
+
+-   Each entry in a JSON field should be an object at the top level, not an array or individual value so that all values have a key specifying what they are (e.g., use “{ "SENSITIVITIES": \[-170.1, -169.8, -170.2\] }” instead of just the array of values “\[-170.1, -169.8, -170.2\]”
+
+-   Always use uppercase letters for object keys to avoid changes in case across rows (e.g., { "HIGH": 177.4 } and { "high": 177.4 } are not compatible)
+
+-   Do not wrap numeric values in double quotes, leave them as numbers (e.g., { "HIGH": 177.4 } instead of { "HIGH": "177.4" })
+
+### Tips for Working with JSON in Spreadsheets
+
+-   Create your JSON in a text editor or JSON validator first to ensure proper formatting
+
+-   For complex JSON structures, consider using a JSON validation tool (like [jsonlint.com](http://jsonlint.com)) before pasting into your spreadsheet
+
+-   Keep JSON structures as simple as possible while still capturing the necessary data
+
+### Consistency is Critical
+
+It is the responsibility of the data contributor to adhere to consistent structures (aka schema) within the JSON field of each table. This is critical for ensuring data integrity and usability, and so JSON data can be readily combined across multiple rows in a given table. While NEFSC provides some example formats for each JSON field in this guide, each data contributor can develop their own JSON schema that aligns with their software and workflow.
