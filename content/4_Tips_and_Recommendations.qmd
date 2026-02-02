@@ -3,7 +3,8 @@ title: "4_Tips_and_Recommendations"
 format: html
 ---
 
-Timezones/Timestamps: All timestamps that are entered into the data submission templates should include the timezone (even if they are in UTC; e.g., 2023-10-12T18:09:05+0000). The NEFSC generally recommends that all recordings are made in UTC. Other timezones are okay, so long as the timezone information is included within the timestamp (e.g., 2023-10-12T18:09:05+0500 to indicate that the audio was recorded in Eastern Standard Time).
+## Tips and Recommendations
 
+-   Timezones/Timestamps: All timestamps that are entered into the data submission templates should include the timezone (even if they are in UTC; e.g., 2023-10-12T18:09:05+0000). The NEFSC generally recommends that all recordings are made in UTC. Other timezones are okay, so long as the timezone information is included within the timestamp (e.g., 2023-10-12T18:09:05+0500 to indicate that the audio was recorded in Eastern Standard Time).
 
-Scenarios and Examples: It is highly recommended that data contributors look through our Scenarios section and the 'examples' template folder in the downloadable zipped folder on the Passive Acoustic Reporting System Templates webpage prior to entering their data into the data submission templates. There may be an example that is similar to their situation.
+-   Scenarios and Examples: It is highly recommended that data contributors look through our [Scenarios](https://docs.google.com/document/d/1VDhnr32qz6CCZEFEneOjSFs1QwamMF5LCqdsc4ok6KU/edit?tab=t.0#heading=h.de3m2pl3n7p1) section and the 'examples' template folder in the downloadable zipped folder on the [Passive Acoustic Reporting System Templates](https://www.fisheries.noaa.gov/resource/document/passive-acoustic-reporting-system-templates) webpage prior to entering their data into the data submission templates. There may be an example that is similar to their situation.
