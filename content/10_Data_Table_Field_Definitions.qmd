@@ -3,3 +3,24 @@ title: "10_Data_Table_Field_Definitions"
 format: html
 ---
 
+## Data Table Field Definitions
+
+The following tables contain definitions for each field or column in the data table templates contained in the zipped folder. Each of the following field definitions tables in this document has a number of columns which are defined below in the Column Header Key section, including columns for specifying which fields are required, the type of data that should be entered (e.g., text, integer, URL), and which reference tables to refer to when filling out that field.
+
+### Column Header Key
+
+-   **Field:** The name of the field 
+
+-   **Definition:** The definition of the field with examples of formatting and what to include
+
+-   **Required:** Indicates whether the field is required (i.e., 'Always') or conditional (e.g., "If recording_device_lost=FALSE, then this field is always required"). Some fields are required if the data are also being submitted to the [National Centers for Environmental Information](https://www.ncei.noaa.gov/) (NCEI). If those fields are not already required for submitting data to the Makara database, then there will be a note in the Required column saying "Required for NCEI".
+
+-   **Default:** Indicates whether the field has a default value if no other value or text is entered
+
+-   **Data Type:** The data type accepted by that field (see [Data Type Formatting Instructions](https://docs.google.com/document/d/1VDhnr32qz6CCZEFEneOjSFs1QwamMF5LCqdsc4ok6KU/edit?tab=t.0#heading=h.dvg5q57emyub))
+
+-   **Reference Table:** The reference table that contains the category options for each field. Some reference tables are labeled with "(see Excel)", indicating that they are global reference tables available in the "Makara - Reference Tables" Excel document\* in the zipped folder. If a reference table is listed here but not found with the rest of the reference tables, it is likely a reference table that is maintained internally by NEFSC and the categories can be searched for directly in Makara.
+
+-   **Constraint:** Any constraints on the contents of that field
+
+*\*Note: An updated copy of each reference table can be accessed by downloading the Excel document on the [Passive Acoustic Reporting System Templates](https://www.fisheries.noaa.gov/resource/document/passive-acoustic-reporting-system-templates) webpage. If a data contributor is submitting data, but does not see the correct or applicable category that they need in one of these tables, they can contact the Makara Database Support Team to request that the category be added.*
