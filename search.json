@@ -158,5 +158,45 @@
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>9_Data_Type_Formatting_Instructions</span>"
     ]
+  },
+  {
+    "objectID": "content/10_Data_Table_Field_Definitions.html",
+    "href": "content/10_Data_Table_Field_Definitions.html",
+    "title": "10  10_Data_Table_Field_Definitions",
+    "section": "",
+    "text": "10.1 Data Table Field Definitions\nThe following tables contain definitions for each field or column in the data table templates contained in the zipped folder. Each of the following field definitions tables in this document has a number of columns which are defined below in the Column Header Key section, including columns for specifying which fields are required, the type of data that should be entered (e.g., text, integer, URL), and which reference tables to refer to when filling out that field.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>10_Data_Table_Field_Definitions</span>"
+    ]
+  },
+  {
+    "objectID": "content/10_Data_Table_Field_Definitions.html#data-table-field-definitions",
+    "href": "content/10_Data_Table_Field_Definitions.html#data-table-field-definitions",
+    "title": "10  10_Data_Table_Field_Definitions",
+    "section": "",
+    "text": "10.1.1 Column Header Key\n\nField: The name of the field \nDefinition: The definition of the field with examples of formatting and what to include\nRequired: Indicates whether the field is required (i.e., ‘Always’) or conditional (e.g., “If recording_device_lost=FALSE, then this field is always required”). Some fields are required if the data are also being submitted to the National Centers for Environmental Information (NCEI). If those fields are not already required for submitting data to the Makara database, then there will be a note in the Required column saying “Required for NCEI”.\nDefault: Indicates whether the field has a default value if no other value or text is entered\nData Type: The data type accepted by that field (see Data Type Formatting Instructions)\nReference Table: The reference table that contains the category options for each field. Some reference tables are labeled with “(see Excel)”, indicating that they are global reference tables available in the “Makara - Reference Tables” Excel document* in the zipped folder. If a reference table is listed here but not found with the rest of the reference tables, it is likely a reference table that is maintained internally by NEFSC and the categories can be searched for directly in Makara.\nConstraint: Any constraints on the contents of that field\n\n*Note: An updated copy of each reference table can be accessed by downloading the Excel document on the Passive Acoustic Reporting System Templates webpage. If a data contributor is submitting data, but does not see the correct or applicable category that they need in one of these tables, they can contact the Makara Database Support Team to request that the category be added.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>10_Data_Table_Field_Definitions</span>"
+    ]
+  },
+  {
+    "objectID": "content/11_Deployments_Table_Field_Definitions.html",
+    "href": "content/11_Deployments_Table_Field_Definitions.html",
+    "title": "11  11_Deployments_Table_Field_Definitions",
+    "section": "",
+    "text": "11.1 Deployments Table Field Definitions\nFilename: deployments.csv\nBelow are the field definitions for the Deployments table, which is a primary table.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>11_Deployments_Table_Field_Definitions</span>"
+    ]
+  },
+  {
+    "objectID": "content/11_Deployments_Table_Field_Definitions.html#deployments-table-field-definitions",
+    "href": "content/11_Deployments_Table_Field_Definitions.html#deployments-table-field-definitions",
+    "title": "11  11_Deployments_Table_Field_Definitions",
+    "section": "",
+    "text": "Field\nDefinition\nRequired\nDefault\nData Type\nReference Table\nConstraint\n\n\norganization_code\nCode for the organization that owns the deployment\n\n\nExamples: “NEFSC”, “WHOI”\nAlways\n\nCode\nOrganizations (see Excel)\n\n\n\ndeployment_code\nUnique code for the deployment. The recommendation is to use [organization_code]_[project_region_code]_[YYYYMM]_[site_code].\n\n\nExamples: “WHOI_GOM_202310_WE03”, “WHOI_MA-RI_202210_WE16”, “NEFSC_MA-RI_202110_NS01”, “NEFSC_MA-RI_202202_COX02”\nAlways\n\nCode\n\nUnique within organization\n\n\nproject_code\nCode of the project that the deployment belongs to. Only need to create a project code if there are multiple deployments that should be grouped together.\n\n\nExamples: “WHOI_GOM_202310”, “NEFSC_MA-RI_202202”\nRequired for NCEI\n\nCode\nProjects",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>11_Deployments_Table_Field_Definitions</span>"
+    ]
   }
 ]

@@ -288,8 +288,17 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#data-table-field-definitions" id="toc-data-table-field-definitions" class="nav-link active" data-scroll-target="#data-table-field-definitions"><span class="header-section-number">10.1</span> Data Table Field Definitions</a>
+  <ul class="collapse">
+  <li><a href="#column-header-key" id="toc-column-header-key" class="nav-link" data-scroll-target="#column-header-key"><span class="header-section-number">10.1.1</span> Column Header Key</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/edit/main/content/10_Data_Table_Field_Definitions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/blob/main/content/10_Data_Table_Field_Definitions.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -313,8 +322,25 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="data-table-field-definitions" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="data-table-field-definitions"><span class="header-section-number">10.1</span> Data Table Field Definitions</h2>
+<p>The following tables contain definitions for each field or column in the data table templates contained in the zipped folder. Each of the following field definitions tables in this document has a number of columns which are defined below in the Column Header Key section, including columns for specifying which fields are required, the type of data that should be entered (e.g., text, integer, URL), and which reference tables to refer to when filling out that field.</p>
+<section id="column-header-key" class="level3" data-number="10.1.1">
+<h3 data-number="10.1.1" class="anchored" data-anchor-id="column-header-key"><span class="header-section-number">10.1.1</span> Column Header Key</h3>
+<ul>
+<li><p><strong>Field:</strong> The name of the field&nbsp;</p></li>
+<li><p><strong>Definition:</strong> The definition of the field with examples of formatting and what to include</p></li>
+<li><p><strong>Required:</strong> Indicates whether the field is required (i.e., ‘Always’) or conditional (e.g., “If recording_device_lost=FALSE, then this field is always required”). Some fields are required if the data are also being submitted to the <a href="https://www.ncei.noaa.gov/">National Centers for Environmental Information</a> (NCEI). If those fields are not already required for submitting data to the Makara database, then there will be a note in the Required column saying “Required for NCEI”.</p></li>
+<li><p><strong>Default:</strong> Indicates whether the field has a default value if no other value or text is entered</p></li>
+<li><p><strong>Data Type:</strong> The data type accepted by that field (see <a href="https://docs.google.com/document/d/1VDhnr32qz6CCZEFEneOjSFs1QwamMF5LCqdsc4ok6KU/edit?tab=t.0#heading=h.dvg5q57emyub">Data Type Formatting Instructions</a>)</p></li>
+<li><p><strong>Reference Table:</strong> The reference table that contains the category options for each field. Some reference tables are labeled with “(see Excel)”, indicating that they are global reference tables available in the “Makara - Reference Tables” Excel document* in the zipped folder. If a reference table is listed here but not found with the rest of the reference tables, it is likely a reference table that is maintained internally by NEFSC and the categories can be searched for directly in Makara.</p></li>
+<li><p><strong>Constraint:</strong> Any constraints on the contents of that field</p></li>
+</ul>
+<p><em>*Note: An updated copy of each reference table can be accessed by downloading the Excel document on the <a href="https://www.fisheries.noaa.gov/resource/document/passive-acoustic-reporting-system-templates">Passive Acoustic Reporting System Templates</a> webpage. If a data contributor is submitting data, but does not see the correct or applicable category that they need in one of these tables, they can contact the Makara Database Support Team to request that the category be added.</em></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -737,7 +763,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/edit/main/content/10_Data_Table_Field_Definitions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/blob/main/content/10_Data_Table_Field_Definitions.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/edit/main/content/10_Data_Table_Field_Definitions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/blob/main/content/10_Data_Table_Field_Definitions.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
