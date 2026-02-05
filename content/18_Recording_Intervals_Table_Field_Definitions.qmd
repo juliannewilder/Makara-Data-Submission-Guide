@@ -1,9 +1,7 @@
 ---
-title: "18_Recording_Intervals_Table_Field_Definitions"
+title: "Recording Intervals Table Field Definitions"
 format: html
 ---
-
-## Recording Intervals Table Field Definitions
 
 **Filename: recording_intervals.csv**
 
