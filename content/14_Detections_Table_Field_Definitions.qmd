@@ -1,9 +1,7 @@
 ---
-title: "14_Detections_Table_Field_Definitions"
+title: "Detections Table Field Definitions"
 format: html
 ---
-
-## Detections Table Field Definitions
 
 **Filename: detections.csv**
 
