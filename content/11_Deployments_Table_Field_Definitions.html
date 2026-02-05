@@ -323,64 +323,6 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="11.1" class="anchored" data-anchor-id="deployments-table-field-definitions"><span class="header-section-number">11.1</span> Deployments Table Field Definitions</h2>
 <p><strong>Filename: deployments.csv</strong></p>
 <p>Below are the field definitions for the Deployments table, which is a primary table.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 8%">
-<col style="width: 53%">
-<col style="width: 6%">
-<col style="width: 4%">
-<col style="width: 5%">
-<col style="width: 9%">
-<col style="width: 9%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Field</strong></td>
-<td><strong>Definition</strong></td>
-<td><strong>Required</strong></td>
-<td><strong>Default</strong></td>
-<td><strong>Data Type</strong></td>
-<td><strong>Reference Table</strong></td>
-<td><strong>Constraint</strong></td>
-</tr>
-<tr class="even">
-<td><strong>organization_code</strong></td>
-<td><p>Code for the organization that owns the deployment</p>
-<p><br>
-</p>
-<p>Examples: “NEFSC”, “WHOI”</p></td>
-<td>Always</td>
-<td></td>
-<td>Code</td>
-<td>Organizations (see Excel)</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><strong>deployment_code</strong></td>
-<td><p>Unique code for the deployment. The recommendation is to use [organization_code]_[project_region_code]_[YYYYMM]_[site_code].</p>
-<p><br>
-</p>
-<p>Examples: “WHOI_GOM_202310_WE03”, “WHOI_MA-RI_202210_WE16”, “NEFSC_MA-RI_202110_NS01”, “NEFSC_MA-RI_202202_COX02”</p></td>
-<td>Always</td>
-<td></td>
-<td>Code</td>
-<td></td>
-<td>Unique within organization</td>
-</tr>
-<tr class="even">
-<td><strong>project_code</strong></td>
-<td><p>Code of the project that the deployment belongs to. Only need to create a project code if there are multiple deployments that should be grouped together.</p>
-<p><br>
-</p>
-<p>Examples: “WHOI_GOM_202310”, “NEFSC_MA-RI_202202”</p></td>
-<td>Required for NCEI</td>
-<td></td>
-<td>Code</td>
-<td>Projects</td>
-<td></td>
-</tr>
-</tbody>
-</table>
 
 
 </section>

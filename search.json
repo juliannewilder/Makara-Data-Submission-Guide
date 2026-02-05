@@ -190,13 +190,163 @@
     ]
   },
   {
-    "objectID": "content/11_Deployments_Table_Field_Definitions.html#deployments-table-field-definitions",
-    "href": "content/11_Deployments_Table_Field_Definitions.html#deployments-table-field-definitions",
-    "title": "11  11_Deployments_Table_Field_Definitions",
+    "objectID": "content/12_Recordings_Table_Field_Definitions.html",
+    "href": "content/12_Recordings_Table_Field_Definitions.html",
+    "title": "12  12_Recordings_Table_Field_Definitions",
     "section": "",
-    "text": "Field\nDefinition\nRequired\nDefault\nData Type\nReference Table\nConstraint\n\n\norganization_code\nCode for the organization that owns the deployment\n\n\nExamples: “NEFSC”, “WHOI”\nAlways\n\nCode\nOrganizations (see Excel)\n\n\n\ndeployment_code\nUnique code for the deployment. The recommendation is to use [organization_code]_[project_region_code]_[YYYYMM]_[site_code].\n\n\nExamples: “WHOI_GOM_202310_WE03”, “WHOI_MA-RI_202210_WE16”, “NEFSC_MA-RI_202110_NS01”, “NEFSC_MA-RI_202202_COX02”\nAlways\n\nCode\n\nUnique within organization\n\n\nproject_code\nCode of the project that the deployment belongs to. Only need to create a project code if there are multiple deployments that should be grouped together.\n\n\nExamples: “WHOI_GOM_202310”, “NEFSC_MA-RI_202202”\nRequired for NCEI\n\nCode\nProjects",
+    "text": "12.1 Recordings Table Field Definitions\nFilename: recordings.csv\nBelow are the field definitions for the Recordings table, which is a primary table.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>11_Deployments_Table_Field_Definitions</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>12_Recordings_Table_Field_Definitions</span>"
+    ]
+  },
+  {
+    "objectID": "content/13_Analyses_Table_Field_Definitions.html",
+    "href": "content/13_Analyses_Table_Field_Definitions.html",
+    "title": "13  13_Analyses_Table_Field_Definitions",
+    "section": "",
+    "text": "13.1 Analyses Table Field Definitions\nFilename: analyses.csv\nBelow are the field definitions for the Analyses table, which is a primary table.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>13_Analyses_Table_Field_Definitions</span>"
+    ]
+  },
+  {
+    "objectID": "content/14_Detections_Table_Field_Definitions.html",
+    "href": "content/14_Detections_Table_Field_Definitions.html",
+    "title": "14  14_Detections_Table_Field_Definitions",
+    "section": "",
+    "text": "14.1 Detections Table Field Definitions\nFilename: detections.csv\nBelow are the field definitions for the Detections table, which is a primary table.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>14_Detections_Table_Field_Definitions</span>"
+    ]
+  },
+  {
+    "objectID": "content/14_Detections_Table_Field_Definitions.html#detections-table-field-definitions",
+    "href": "content/14_Detections_Table_Field_Definitions.html#detections-table-field-definitions",
+    "title": "14  14_Detections_Table_Field_Definitions",
+    "section": "",
+    "text": "Field\nDefinition\nRequired\nDefault\nData Type\nReference Table\nConstraint\n\n\ndeployment_organization_code\nCode of the organization that the deployment belongs to.\n\n\nExamples: “NEFSC”, “WHOI”\nAlways\n\nCode\nOrganizations (see Excel)\n\n\n\ndeployment_code\nUnique code for the deployment that the analysis belongs to.\n\n\nExamples: “WHOI_GOM_202310_WE03”, “WHOI_MA-RI_202210_WE16”, “NEFSC_MA-RI_202110_NS01”, “NEFSC_MA-RI_202202_COX02”\nAlways\n\nCode\nDeployments\n\n\n\nanalysis_organization_code\nCode of the organization that conducted and owns the analysis.\n\n\nExamples: “NEFSC”, “WHOI”\nAlways\n\nCode\nOrganizations (see Excel)\n\n\n\nanalysis_code\nCode of the analysis that the detection belongs to.\n\n\nExamples: “RIWH_ANALYSIS”, “BEAKED_ANALYSIS”\nAlways\n\nCode\nAnalyses\n\n\n\ndetection_start_datetime\nStart date and time for the time period for the detection event or time bin depending on analysis granularity\n\n\nExample: “2025-03-26T15:34:27-0500”\nAlways\n\nTimestamp\n\n\n\n\ndetection_end_datetime\nEnd date and time for the time period for the detection event or time bin depending on analysis granularity. If detection is for a single point in time, the start and end datetimes can be the same.\n\n\nExamples: “2025-03-26T15:34:27-0500”, “2025-03-26T15:34:30-0500”\nAlways\n\nTimestamp\n\n\n\n\ndetection_effort_secs\nThe amount of time (in seconds) the effort occurred in. This would translate to encounter or event duration for encounter/event level data. If the entire period was analyzed, enter total duration between the detection start and end datetimes.\n\n\nExample: If the first 5 minutes of every hourly analysis bin was analyzed, this number would be “300”. If the full hour of every hourly analysis bin was analyzed, this number would be “3600”.\nAlways\n\nFloat\n\n\n\n\ndetection_sound_source_code\nThe species or detected sound the detection period relates to\n\n\nExamples: “HUWH”, “STDO”, “RV-L”, “RAIN”\nAlways\n\nCode\nSound Sources (see Excel)\n\n\n\ndetection_call_type_code\nThe call/click type used for presence determination for the detection period\n\n\nExamples: “RIWH_UPCALL”, “HUWH_SONG”, “OD_WHIS_HF”\nAlways\n\nCode\nCall Types (see Excel)\n\n\n\ndetection_behavior_code\nBehavior associated with detected event\n\n\nExamples: “CONTACT”, “FORAGING”, “MOM_CALF”, “MATING”\n\n\nCode\nBehaviors (see Excel)\n\n\n\ndetection_demographic_code\nThe demographic determined of the sound source for the detection period\n\n\nExamples: “ADULT_FEMALE_OR_JUV”, “MID-SIZED_INDIVIDUAL”, “MIXED_GROUP”\n\n\nCode\nDemographics (see Excel)\n\n\n\ndetection_n_validated\nNumber of actual detections that have been validated to be correct in the detection time period\n\n\nExamples: “3”, “258”\n\n\nInteger\n\n\n\n\ndetection_n_total\nTotal number of detections for the sound source within the detection time period (can include true and false detections)\n\n\nExamples: “15”, “179”\n\n\nInteger\n\n\n\n\ndetection_result_code\nDetection result indicating if the species was detected or not\n\n\nExamples: “DETECTED”, “POSSIBLY_DETECTED”, “NOT_DETECTED”\nAlways\n\nCode\nDetection Result Types (see Excel)\n\n\n\ndetection_event_type\nType of detection event (if available)\n\n\nExample: PAMGuard’s eventType field\n\n\nText\n\n\n\n\ndetection_event_id\nID of the detection event (if available)\n\n\nExample: PAMGuard’s event ID\n\n\nText\n\n\n\n\ndetection_latitude\nLatitude of the platform location at time of detection (or start of encounter) in decimal degrees (DD.DDDD), only applicable to mobile platforms (e.g., gliders, buoys)\n\n\nExample: “41.141289”\n\n\nFloat\n\n\n\n\ndetection_longitude\nLongitude of the platform location at time of detection (or start of encounter) in decimal degrees (DD.DDDD), only applicable to mobile platforms (e.g., gliders, buoys). Negative for locations west of the central meridian.\n\n\nExample: “-71.102908”\n\n\nFloat\n\n\n\n\ndetection_received_level_db\nReceived level of the detection in dB. For single call detections, a singular value should be placed here. For encounters or time binned data, an average or median received level should be placed here. Further details such as the exact unit (e.g. dB RMS, or dB pp), and whether a median or average received level was used should be placed in the analysis_json or analysis_comments fields of the parent analysis. For encounters/time binned data, each signal’s received level can be placed in the detection_json field.\n\n\nExample: “15”\n\n\nFloat\n\n\n\n\ndetection_quality_code\nQuality type of the detection if it was validated or not. This field may be left blank if the analysis_quality_code is “UNKNOWN” for the parent analysis, otherwise it is recommended to fill it out.\n\n\nExamples: “INVALID”, “UNVERIFIED”, “VALID”, “PARTIALLY_VALID”\n\n\nCode\nDetection Quality Types (see Excel)\n\n\n\ndetection_n_animals\nEstimated number of animals thought to be in the detection\n\n\nExample: “25”\n\n\nInteger\n\n\n\n\ndetection_n_animals_min\nMinimum number of animals thought to be in the detection\n\n\nExample: “1”\n\n\nInteger\n\n\n\n\ndetection_n_animals_max\nMaximum number of animals thought to be in the detection\n\n\nExample: “3”\n\n\nInteger\n\n\n\n\ndetection_json\nAdditional structured data about the detection\n\n\nJSON\n\n\n\n\ndetection_comments\nComments about the detection\n\n\nText\n\n\n\n\nlocalization_method_code\nMethod used to localize the position of the animal(s)\n\n\nExamples: “3D_SIMPLEX”, “DMON_REAL-TIME”, “SHIP-POSITION”\nRequired if submitting localization data\n\nCode\nLocalization Methods (see Excel)\n\n\n\nlocalization_latitude\nEstimated localized latitude of the animal in decimal degrees (DD.DDDDDD)\n\n\nExample: “41.141289”\n\n\nFloat\n\n\n\n\nlocalization_latitude_min\nMinimum localized latitude accounting for localization uncertainty in decimal degrees (DD.DDDDDD)\n\n\nExample: “40.724307”\n\n\nFloat\n\n\n\n\nlocalization_latitude_max\nMaximum localized latitude accounting for localization uncertainty in decimal degrees (DD.DDDDDD)\n\n\nExample: “41.141289”\n\n\nFloat\n\n\n\n\nlocalization_longitude\nEstimates localized longitude of the animal in decimal degrees (DD.DDDDDD), negative for locations west of the central meridian\n\n\nExample: “-71.102908”\n\n\nFloat\n\n\n\n\nlocalization_longitude_min\nMinimum localized longitude accounting for localization uncertainty in decimal degrees (DD.DDDDDD), negative for locations west of the central meridian\n\n\nExample: “-70.016567”\n\n\nFloat\n\n\n\n\nlocalization_longitude_max\nMaximum localized longitude accounting for localization uncertainty in decimal degrees (DD.DDDDDD), negative for locations west of the central meridian\n\n\nExample: “-71.102908”\n\n\nFloat\n\n\n\n\nlocalization_distance_m\nEstimated range of detection (in meters) from the recording platform\n\n\nExamples: “3”, “60.5”\n\n\nFloat\n\n\n\n\nlocalization_distance_m_min\nMinimum range of detection (in meters) from the recording platform\n\n\nExample: “0”\n\n\nFloat\n\n\n\n\nlocalization_distance_m_max\nMaximum range of detection (in meters) from the recording platform\n\n\nExample: “8047”\n\n\nFloat\n\n\n\n\nlocalization_bearing\nFor beamforming, the estimated bearing angle of the localization cone (0-360 degrees). Specify if bearing is measured relative to true north, magnetic north, or device orientation, and compass rose convention (clockwise, counter-clockwise) in analysis_json or analysis_comments.\n\n\nExamples: “170”, “170.5”\n\n\nFloat\n\n\n\n\nlocalization_bearing_min\nFor beamforming, the start bearing angle of the localization cone (0-360 degrees)\n\n\nExamples: “167”, “167.5”\n\n\nFloat\n\n\n\n\nlocalization_bearing_max\nFor beamforming, the end bearing angle of the localization cone (0-360 degrees)\n\n\nExample: “175”, “175.34”\n\n\nFloat\n\n\n\n\nlocalization_depth_method_code\nMethod used to estimate depth of the animal(s)\n\n\nExamples: “3D_TDOA”, “MANUAL_DRTD”, “WHALEDO”\n\n\nCode\nLocalization Depth Methods (see Excel)\n\n\n\nlocalization_depth_n_signals\nNumber of signals used to derive the depth\n\n\nExamples: “7”, “218”\n\n\nInteger\n\n\n\n\nlocalization_depth_m\nEstimated depth of animal (in meters)\n\n\nExamples: “5”, “28.6”\n\n\nFloat\n\n\n\n\nlocalization_depth_m_min\nMinimum depth of animal (in meters)\n\n\nExample: “1.5”\n\n\nFloat\n\n\n\n\nlocalization_depth_m_max\nMaximum depth of animal (in meters)\n\n\nExample: “893”\n\n\nFloat\n\n\n\n\nlocalization_json\nAdditional structured data about localization in JSON format\n\n\nJSON\n\n\n\n\nlocalization_comments\nComments about the localization\n\n\nText",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>14_Detections_Table_Field_Definitions</span>"
+    ]
+  },
+  {
+    "objectID": "content/15_Devices_Table_Field_Definitions.html",
+    "href": "content/15_Devices_Table_Field_Definitions.html",
+    "title": "15  15_Devices_Table_Field_Definitions",
+    "section": "",
+    "text": "15.1 Devices Table Field Definitions\nFilename: devices.csv\nBelow are the field definitions for the Devices table, which is an optional table. It is only required if one or more new devices need to be added to Makara.",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>15_Devices_Table_Field_Definitions</span>"
+    ]
+  },
+  {
+    "objectID": "content/16_Projects_Table_Field_Definitions.html",
+    "href": "content/16_Projects_Table_Field_Definitions.html",
+    "title": "16  16_Projects_Table_Field_Definitions",
+    "section": "",
+    "text": "16.1 Projects Table Field Definitions\nFilename: projects.csv\nBelow are the field definitions for the Projects table, which is an optional table. It is only required if multiple deployments are submitted that the data contributor would like to have grouped together, or if new deployments are submitted that should be grouped with deployments that are already in Makara.",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>16_Projects_Table_Field_Definitions</span>"
+    ]
+  },
+  {
+    "objectID": "content/17_Sites_Table_Field_Definitions.html",
+    "href": "content/17_Sites_Table_Field_Definitions.html",
+    "title": "17  17_Sites_Table_Field_Definitions",
+    "section": "",
+    "text": "17.1 Sites Table Field Definitions\nFilename: sites.csv\nBelow are the field definitions for the Sites table, which is an optional table. It is only required if one or more new deployment sites need to be added to Makara.",
+    "crumbs": [
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>17_Sites_Table_Field_Definitions</span>"
+    ]
+  },
+  {
+    "objectID": "content/18_Recording_Intervals_Table_Field_Definitions.html",
+    "href": "content/18_Recording_Intervals_Table_Field_Definitions.html",
+    "title": "18  18_Recording_Intervals_Table_Field_Definitions",
+    "section": "",
+    "text": "18.1 Recording Intervals Table Field Definitions\nFilename: recording_intervals.csv\nBelow are the field definitions for the Recording Intervals table, which is an optional table. It is only required if one or more recordings have periods of compromised data (duty cycling is accounted for in the Recordings table, not the Recording Intervals table). For an example of a recording_intervals table that is filled out, see Example #1. UPDATE LINK",
+    "crumbs": [
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>18_Recording_Intervals_Table_Field_Definitions</span>"
+    ]
+  },
+  {
+    "objectID": "content/19_Tracks_Table_Field_Definitions.html",
+    "href": "content/19_Tracks_Table_Field_Definitions.html",
+    "title": "19  19_Tracks_Table_Field_Definitions",
+    "section": "",
+    "text": "19.1 Tracks Table Field Definitions\nFilename: tracks.csv\nBelow are the field definitions for the Tracks table, which is an optional table. It is only required if one or more mobile deployments are being submitted to Makara.",
+    "crumbs": [
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>19_Tracks_Table_Field_Definitions</span>"
+    ]
+  },
+  {
+    "objectID": "content/20_Track_Positions_Table_Field_Definitions.html",
+    "href": "content/20_Track_Positions_Table_Field_Definitions.html",
+    "title": "20  20_Track_Positions_Table_Field_Definitions",
+    "section": "",
+    "text": "20.1 Track Positions Table Field Definitions\nFilename: track_positions.csv\nBelow are the field definitions for the Track Positions table, which is an optional table. It is only required if one or more mobile deployments are being submitted to Makara.",
+    "crumbs": [
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>20_Track_Positions_Table_Field_Definitions</span>"
+    ]
+  },
+  {
+    "objectID": "content/21_Sensor_Dataset_Field_Definitions.html",
+    "href": "content/21_Sensor_Dataset_Field_Definitions.html",
+    "title": "21  21_Sensor_Dataset_Field_Definitions",
+    "section": "",
+    "text": "21.1 Sensor Dataset Table Field Definitions\nFilename: sensor_datasets.csv\nBelow are the field definitions for the Sensor Datasets table, which is an optional table. It is only needed when submitting sensor data such as temperatures for a deployment. Note that a separate dataset must be created for each variable.",
+    "crumbs": [
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>21_Sensor_Dataset_Field_Definitions</span>"
+    ]
+  },
+  {
+    "objectID": "content/22_Sensor_Values_Table_Field_Definitions.html",
+    "href": "content/22_Sensor_Values_Table_Field_Definitions.html",
+    "title": "22  22_Sensor_Values_Table_Field_Definitions",
+    "section": "",
+    "text": "22.1 Sensor Values Table Field Definitions\nFilename: sensor_values.csv\nBelow are the field definitions for the Sensor Values table, which is an optional table. It is only required if one or more mobile deployments are being submitted to Makara.",
+    "crumbs": [
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>22_Sensor_Values_Table_Field_Definitions</span>"
+    ]
+  },
+  {
+    "objectID": "content/23_Frequently_Asked_Questions.html",
+    "href": "content/23_Frequently_Asked_Questions.html",
+    "title": "23  23_Frequently_Asked_Questions",
+    "section": "",
+    "text": "23.1 Frequently Asked Questions",
+    "crumbs": [
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>23_Frequently_Asked_Questions</span>"
+    ]
+  },
+  {
+    "objectID": "content/23_Frequently_Asked_Questions.html#frequently-asked-questions",
+    "href": "content/23_Frequently_Asked_Questions.html#frequently-asked-questions",
+    "title": "23  23_Frequently_Asked_Questions",
+    "section": "",
+    "text": "23.1.1 Where can I find the submission templates to enter my data/metadata?\nThe data template tables and example tables are provided in a downloadable zipped folder on the Passive Acoustic Reporting System Templates webpage.\n\n\n23.1.2 What happens if I find a mistake in my metadata after I have submitted my templates? For example, you submit your recordings data in local time but realize later you need to change it to UTC.\nNot to worry! You have two options: 1) you can resubmit a whole table (or tables) with the corrected data, or 2) you can go to Makara directly and correct a field or fields. For example, if you change the site_code in the Sites table, all of the deployments that reference that site_code will automatically be updated to the new site_code.",
+    "crumbs": [
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>23_Frequently_Asked_Questions</span>"
+    ]
+  },
+  {
+    "objectID": "content/24_Example_Scenarios.html",
+    "href": "content/24_Example_Scenarios.html",
+    "title": "24  24_Example_Scenarios",
+    "section": "",
+    "text": "24.1 Example Scenarios\nThe following scenarios describe potential situations that may arise when submitting data and metadata to Makara. Each scenario is associated with a set of example templates provided in the zipped folder that provide a mockup of what that scenario might look like. Within the template zipped folder is a sub-directory named “examples/”. This sub-directory contains four example folders containing CSV files that are filled out according to each scenario.",
+    "crumbs": [
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>24_Example_Scenarios</span>"
+    ]
+  },
+  {
+    "objectID": "content/24_Example_Scenarios.html#example-scenarios",
+    "href": "content/24_Example_Scenarios.html#example-scenarios",
+    "title": "24  24_Example_Scenarios",
+    "section": "",
+    "text": "24.1.1 Example #1: Single moorings with multiple same recorder types but different settings\n\n24.1.1.1 Location of example templates within zipped folder: examples/EXAMPLE_1_Moorings_Same_Recorder_Type\nThis example shows two single, bottom-mounted moorings, each equipped with two SoundTraps, a temperature sensor, and a Vemco receiver. The NS01 mooring was deployed near Nantucket Shoals off the coast of Massachusetts and Rhode Island from October 2021 to February 2022. It had one SoundTrap600 (ST600 STD) and one high-frequency SoundTrap600 (ST600 HF) to record harbor porpoises. Both devices recorded over the whole deployment, but the ST600 HF was duty-cycled, recording for 5 minutes at the beginning of each hour with a sampling rate of 384 kHz. The ST600 STD recorded continuously with a lower sampling rate of 64 kHz. This example also shows what it looks like when there are compromised data in one of the recordings (e.g., a data gap in the recording from the ST600 HF), which can be viewed on the recording_intervals table. Daily presence of North Atlantic right whales was analyzed for 6 days from the ST600 STD recording, and hourly presence of harbor porpoises was analyzed for 6 days from the ST600 HF recording.\nThe COX01 mooring was deployed near Cox Ledge off the coast of Massachusetts and Rhode Island from November 2021 to February 2022. It had two ST600 HF hydrophones that recorded continuously with a sampling rate of 384 kHz, but one is only on and recording for the first half of the deployment (2021-11-03 to 2022-01-01) and the other is recording for the second half of the deployment (2022-01-01 to 2022-02-24; see the recordings table). Daily presence of North Atlantic right whales and hourly presence of harbor porpoises were analyzed for 6 days from each of the COX01 recordings. Note: More analyses were performed over the whole deployment, but for this example we only showed 6 days worth of analysis.\n\n\n\n24.1.2 Example #2: Single moorings with multiple different recorder types\n\n24.1.2.1 Location of example templates within zipped folder: examples/EXAMPLE_2_Moorings_Different_Recorder_Types\nThis example shows a single, bottom-mounted mooring that was deployed in the offshore Gulf of Maine along the northern edge of Georges Bank from July to December 2022. The mooring was equipped with two hydrophones (one SoundTrap600 with a sampling rate of 64 kHz and one FPOD with a sampling rate of 1,000 kHz to record harbor porpoise), a temperature sensor, and a Vemco receiver. Both devices recorded continuously over the whole deployment, but the FPOD recordings were automatically deleted once they were processed in real-time by a click detector onboard the platform (so only detection data were collected from the FPOD, no audio data). Daily presence of blue whales were analyzed for 6 days from the ST600 STD recording, and hourly presence of harbor porpoises were determined automatically from the detection data for 6 days from the FPOD data. Note: More analyses were performed over the whole deployment, but for this example we only showed 6 days worth of analysis.\n\n\n\n24.1.3 Example #3: Towed array deployments across multiple cruise legs\n\n24.1.3.1 Location of example templates within zipped folder: examples/EXAMPLE_3_Towed_Array\nThis example shows recordings from five towed array deployments across different legs of a research cruise that surveyed offshore of the northeast U.S. in June-August 2016. The towed array setup consisted of two separate oil-filled arrays (an inline and an endline array), each containing multiple hydrophones and one containing a depth sensor. There were different types of hydrophones (e.g., APC, Reson, HTI), all of which recorded continuously whenever the array was deployed. Some had a sampling rate of 192 kHz while others had a sampling rate of 500 kHz to record Kogia clicks.\nAll of the 192 kHz recordings were post-processed and analyzed for the clicks of various beaked whale species including Blainville’s, goose-beaked, Gervais’, unidentified True’s/Gervais’, Sowerby’s, True’s, and unidentified Mesoplodon. Three of the 500 kHz recordings from deployments NEFSC_HB1603_DEP1, DEP3, and DEP4 were post-processed and analyzed for unidentified pygmy/dwarf sperm whales. The 192 kHz recording from deployment NEFSC_HB1603_DEP3 was also analyzed in real-time onboard the ship for presence of Blainville’s beaked whales, bottlenose dolphins, unidentified common dolphins, goose-beaked beaked whales, Gervais’ beaked whales, unidentified Risso’s/bottlenose dolphins, unidentified True’s/Gervais’, unidentified pilot whales, pantropical spotted dolphins, Sowerby’s beaked whales, sperm whales, striped dolphins, True’s beaked whales, and unidentified dolphins.\n\n\n\nDiagram of a towed array of hydrophones being towed from the back of a research vessel. The labeled, nested devices correspond to the devices listed in the Example 3 templates.\n\n\n\n\n\n24.1.4 Example #4: Glider deployment\n\n24.1.4.1 Location of example templates within zipped folder: examples/EXAMPLE_4_Gliders\nThis example shows an autonomous Slocum glider that was deployed near Cox Ledge off the coast of Massachusetts and Rhode Island from October 2022 to December 2023. The glider was equipped with a second generation Digital Acoustic Monitoring instrument (DMON2) and a Vemco receiver. The DMON2 was recording continuously throughout the deployment with a sampling rate of 2 kHz. Subsampled periods of simplified spectrograms (without the acoustic recordings) were transmitted to shore via satellite every 2 hours, and then analyzed for presence of sei, fin, humpback, and North Atlantic right whales in near-real time . The full audio recordings were collected when the glider and hard drive were retrieved.",
+    "crumbs": [
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>24_Example_Scenarios</span>"
     ]
   }
 ]

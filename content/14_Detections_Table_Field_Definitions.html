@@ -288,8 +288,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#detections-table-field-definitions" id="toc-detections-table-field-definitions" class="nav-link active" data-scroll-target="#detections-table-field-definitions"><span class="header-section-number">14.1</span> Detections Table Field Definitions</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/edit/main/content/14_Detections_Table_Field_Definitions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/blob/main/content/14_Detections_Table_Field_Definitions.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -313,8 +319,563 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="detections-table-field-definitions" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="detections-table-field-definitions"><span class="header-section-number">14.1</span> Detections Table Field Definitions</h2>
+<p><strong>Filename: detections.csv</strong></p>
+<p>Below are the field definitions for the Detections table, which is a primary table.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 75%">
+<col style="width: 6%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 5%">
+<col style="width: 2%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Field</strong></td>
+<td><strong>Definition</strong></td>
+<td><strong>Required</strong></td>
+<td><strong>Default</strong></td>
+<td><strong>Data Type</strong></td>
+<td><strong>Reference Table</strong></td>
+<td><strong>Constraint</strong></td>
+</tr>
+<tr class="even">
+<td><strong>deployment_organization_code</strong></td>
+<td><p>Code of the organization that the deployment belongs to.</p>
+<p><br>
+</p>
+<p>Examples: “NEFSC”, “WHOI”</p></td>
+<td>Always</td>
+<td></td>
+<td>Code</td>
+<td>Organizations (see Excel)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>deployment_code</strong></td>
+<td><p>Unique code for the deployment that the analysis belongs to.</p>
+<p><br>
+</p>
+<p>Examples: “WHOI_GOM_202310_WE03”, “WHOI_MA-RI_202210_WE16”, “NEFSC_MA-RI_202110_NS01”, “NEFSC_MA-RI_202202_COX02”</p></td>
+<td>Always</td>
+<td></td>
+<td>Code</td>
+<td>Deployments</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>analysis_organization_code</strong></td>
+<td><p>Code of the organization that conducted and owns the analysis.</p>
+<p><br>
+</p>
+<p>Examples: “NEFSC”, “WHOI”</p></td>
+<td>Always</td>
+<td></td>
+<td>Code</td>
+<td>Organizations (see Excel)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>analysis_code</strong></td>
+<td><p>Code of the analysis that the detection belongs to.</p>
+<p><br>
+</p>
+<p>Examples: “RIWH_ANALYSIS”, “BEAKED_ANALYSIS”</p></td>
+<td>Always</td>
+<td></td>
+<td>Code</td>
+<td>Analyses</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>detection_start_datetime</strong></td>
+<td><p>Start date and time for the time period for the detection event or time bin depending on analysis granularity</p>
+<p><br>
+</p>
+<p>Example: “2025-03-26T15:34:27-0500”</p></td>
+<td>Always</td>
+<td></td>
+<td>Timestamp</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>detection_end_datetime</strong></td>
+<td><p>End date and time for the time period for the detection event or time bin depending on analysis granularity. If detection is for a single point in time, the start and end datetimes can be the same.</p>
+<p><br>
+</p>
+<p>Examples: “2025-03-26T15:34:27-0500”, “2025-03-26T15:34:30-0500”</p></td>
+<td>Always</td>
+<td></td>
+<td>Timestamp</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>detection_effort_secs</strong></td>
+<td><p>The amount of time (in seconds) the effort occurred in. This would translate to encounter or event duration for encounter/event level data. If the entire period was analyzed, enter total duration between the detection start and end datetimes.</p>
+<p><br>
+</p>
+<p>Example: If the first 5 minutes of every hourly analysis bin was analyzed, this number would be “300”. If the full hour of every hourly analysis bin was analyzed, this number would be “3600”.</p></td>
+<td>Always</td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>detection_sound_source_code</strong></td>
+<td><p>The species or detected sound the detection period relates to</p>
+<p><br>
+</p>
+<p>Examples: “HUWH”, “STDO”, “RV-L”, “RAIN”</p></td>
+<td>Always</td>
+<td></td>
+<td>Code</td>
+<td>Sound Sources (see Excel)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>detection_call_type_code</strong></td>
+<td><p>The call/click type used for presence determination for the detection period</p>
+<p><br>
+</p>
+<p>Examples: “RIWH_UPCALL”, “HUWH_SONG”, “OD_WHIS_HF”</p></td>
+<td>Always</td>
+<td></td>
+<td>Code</td>
+<td>Call Types (see Excel)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>detection_behavior_code</strong></td>
+<td><p>Behavior associated with detected event</p>
+<p><br>
+</p>
+<p>Examples: “CONTACT”, “FORAGING”, “MOM_CALF”, “MATING”</p></td>
+<td></td>
+<td></td>
+<td>Code</td>
+<td>Behaviors (see Excel)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>detection_demographic_code</strong></td>
+<td><p>The demographic determined of the sound source for the detection period</p>
+<p><br>
+</p>
+<p>Examples: “ADULT_FEMALE_OR_JUV”, “MID-SIZED_INDIVIDUAL”, “MIXED_GROUP”</p></td>
+<td></td>
+<td></td>
+<td>Code</td>
+<td>Demographics (see Excel)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>detection_n_validated</strong></td>
+<td><p>Number of actual detections that have been validated to be correct in the detection time period</p>
+<p><br>
+</p>
+<p>Examples: “3”, “258”</p></td>
+<td></td>
+<td></td>
+<td>Integer</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>detection_n_total</strong></td>
+<td><p>Total number of detections for the sound source within the detection time period (can include true and false detections)</p>
+<p><br>
+</p>
+<p>Examples: “15”, “179”</p></td>
+<td></td>
+<td></td>
+<td>Integer</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>detection_result_code</strong></td>
+<td><p>Detection result indicating if the species was detected or not</p>
+<p><br>
+</p>
+<p>Examples: “DETECTED”, “POSSIBLY_DETECTED”, “NOT_DETECTED”</p></td>
+<td>Always</td>
+<td></td>
+<td>Code</td>
+<td>Detection Result Types (see Excel)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>detection_event_type</strong></td>
+<td><p>Type of detection event (if available)</p>
+<p><br>
+</p>
+<p>Example: PAMGuard’s eventType field</p></td>
+<td></td>
+<td></td>
+<td>Text</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>detection_event_id</strong></td>
+<td><p>ID of the detection event (if available)</p>
+<p><br>
+</p>
+<p>Example: PAMGuard’s event ID</p></td>
+<td></td>
+<td></td>
+<td>Text</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>detection_latitude</strong></td>
+<td><p>Latitude of the platform location at time of detection (or start of encounter) in decimal degrees (DD.DDDD), only applicable to mobile platforms (e.g., gliders, buoys)</p>
+<p><br>
+</p>
+<p>Example: “41.141289”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>detection_longitude</strong></td>
+<td><p>Longitude of the platform location at time of detection (or start of encounter) in decimal degrees (DD.DDDD), only applicable to mobile platforms (e.g., gliders, buoys). Negative for locations west of the central meridian.</p>
+<p><br>
+</p>
+<p>Example: “-71.102908”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>detection_received_level_db</strong></td>
+<td><p>Received level of the detection in dB. For single call detections, a singular value should be placed here. For encounters or time binned data, an average or median received level should be placed here. Further details such as the exact unit (e.g.&nbsp;dB RMS, or dB pp), and whether a median or average received level was used should be placed in the analysis_json or analysis_comments fields of the parent analysis. For encounters/time binned data, each signal’s received level can be placed in the detection_json field.</p>
+<p><br>
+</p>
+<p>Example: “15”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>detection_quality_code</strong></td>
+<td><p>Quality type of the detection if it was validated or not. This field may be left blank if the analysis_quality_code is “UNKNOWN” for the parent analysis, otherwise it is recommended to fill it out.</p>
+<p><br>
+</p>
+<p>Examples: “INVALID”, “UNVERIFIED”, “VALID”, “PARTIALLY_VALID”</p></td>
+<td></td>
+<td></td>
+<td>Code</td>
+<td>Detection Quality Types (see Excel)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>detection_n_animals</strong></td>
+<td><p>Estimated number of animals thought to be in the detection</p>
+<p><br>
+</p>
+<p>Example: “25”</p></td>
+<td></td>
+<td></td>
+<td>Integer</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>detection_n_animals_min</strong></td>
+<td><p>Minimum number of animals thought to be in the detection</p>
+<p><br>
+</p>
+<p>Example: “1”</p></td>
+<td></td>
+<td></td>
+<td>Integer</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>detection_n_animals_max</strong></td>
+<td><p>Maximum number of animals thought to be in the detection</p>
+<p><br>
+</p>
+<p>Example: “3”</p></td>
+<td></td>
+<td></td>
+<td>Integer</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>detection_json</strong></td>
+<td>Additional structured data about the detection</td>
+<td></td>
+<td></td>
+<td>JSON</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>detection_comments</strong></td>
+<td>Comments about the detection</td>
+<td></td>
+<td></td>
+<td>Text</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>localization_method_code</strong></td>
+<td><p>Method used to localize the position of the animal(s)</p>
+<p><br>
+</p>
+<p>Examples: “3D_SIMPLEX”, “DMON_REAL-TIME”, “SHIP-POSITION”</p></td>
+<td>Required if submitting localization data</td>
+<td></td>
+<td>Code</td>
+<td>Localization Methods (see Excel)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>localization_latitude</strong></td>
+<td><p>Estimated localized latitude of the animal in decimal degrees (DD.DDDDDD)</p>
+<p><br>
+</p>
+<p>Example: “41.141289”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>localization_latitude_min</strong></td>
+<td><p>Minimum localized latitude accounting for localization uncertainty in decimal degrees (DD.DDDDDD)</p>
+<p><br>
+</p>
+<p>Example: “40.724307”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>localization_latitude_max</strong></td>
+<td><p>Maximum localized latitude accounting for localization uncertainty in decimal degrees (DD.DDDDDD)</p>
+<p><br>
+</p>
+<p>Example: “41.141289”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>localization_longitude</strong></td>
+<td><p>Estimates localized longitude of the animal in decimal degrees (DD.DDDDDD), negative for locations west of the central meridian</p>
+<p><br>
+</p>
+<p>Example: “-71.102908”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>localization_longitude_min</strong></td>
+<td><p>Minimum localized longitude accounting for localization uncertainty in decimal degrees (DD.DDDDDD), negative for locations west of the central meridian</p>
+<p><br>
+</p>
+<p>Example: “-70.016567”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>localization_longitude_max</strong></td>
+<td><p>Maximum localized longitude accounting for localization uncertainty in decimal degrees (DD.DDDDDD), negative for locations west of the central meridian</p>
+<p><br>
+</p>
+<p>Example: “-71.102908”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>localization_distance_m</strong></td>
+<td><p>Estimated range of detection (in meters) from the recording platform</p>
+<p><br>
+</p>
+<p>Examples: “3”, “60.5”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>localization_distance_m_min</strong></td>
+<td><p>Minimum range of detection (in meters) from the recording platform</p>
+<p><br>
+</p>
+<p>Example: “0”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>localization_distance_m_max</strong></td>
+<td><p>Maximum range of detection (in meters) from the recording platform</p>
+<p><br>
+</p>
+<p>Example: “8047”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>localization_bearing</strong></td>
+<td><p>For beamforming, the estimated bearing angle of the localization cone (0-360 degrees). Specify if bearing is measured relative to true north, magnetic north, or device orientation, and compass rose convention (clockwise, counter-clockwise) in analysis_json or analysis_comments.</p>
+<p><br>
+</p>
+<p>Examples: “170”, “170.5”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>localization_bearing_min</strong></td>
+<td><p>For beamforming, the start bearing angle of the localization cone (0-360 degrees)</p>
+<p><br>
+</p>
+<p>Examples: “167”, “167.5”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>localization_bearing_max</strong></td>
+<td><p>For beamforming, the end bearing angle of the localization cone (0-360 degrees)</p>
+<p><br>
+</p>
+<p>Example: “175”, “175.34”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>localization_depth_method_code</strong></td>
+<td><p>Method used to estimate depth of the animal(s)</p>
+<p><br>
+</p>
+<p>Examples: “3D_TDOA”, “MANUAL_DRTD”, “WHALEDO”</p></td>
+<td></td>
+<td></td>
+<td>Code</td>
+<td>Localization Depth Methods (see Excel)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>localization_depth_n_signals</strong></td>
+<td><p>Number of signals used to derive the depth</p>
+<p><br>
+</p>
+<p>Examples: “7”, “218”</p></td>
+<td></td>
+<td></td>
+<td>Integer</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>localization_depth_m</strong></td>
+<td><p>Estimated depth of animal (in meters)</p>
+<p><br>
+</p>
+<p>Examples: “5”, “28.6”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>localization_depth_m_min</strong></td>
+<td><p>Minimum depth of animal (in meters)</p>
+<p><br>
+</p>
+<p>Example: “1.5”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>localization_depth_m_max</strong></td>
+<td><p>Maximum depth of animal (in meters)</p>
+<p><br>
+</p>
+<p>Example: “893”</p></td>
+<td></td>
+<td></td>
+<td>Float</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>localization_json</strong></td>
+<td>Additional structured data about localization in JSON format</td>
+<td></td>
+<td></td>
+<td>JSON</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>localization_comments</strong></td>
+<td>Comments about the localization</td>
+<td></td>
+<td></td>
+<td>Text</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -737,7 +1298,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/edit/main/content/14_Detections_Table_Field_Definitions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/blob/main/content/14_Detections_Table_Field_Definitions.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/edit/main/content/14_Detections_Table_Field_Definitions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/blob/main/content/14_Detections_Table_Field_Definitions.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/juliannewilder/Makara-Data-Submission-Guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
