@@ -3,3 +3,8 @@ title: "22_Sensor_Values_Table_Field_Definitions"
 format: html
 ---
 
+## Sensor Values Table Field Definitions
+
+**Filename: sensor_values.csv**
+
+Below are the field definitions for the Sensor Values table, which is an optional table. It is only required if one or more mobile deployments are being submitted to Makara.
