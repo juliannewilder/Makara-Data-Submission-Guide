@@ -1,14 +1,12 @@
 ---
-title: "8_Reference_Tables_Maintained_by_NEFSC"
+title: "Reference Tables Maintained by NEFSC"
 format: html
 ---
-
-## Reference Tables Maintained by NEFSC
 
 NEFSC maintains the reference tables that are listed below. An updated copy of each table can be accessed by downloading the Excel document on the [Passive Acoustic Reporting System Templates](https://www.fisheries.noaa.gov/resource/document/passive-acoustic-reporting-system-templates) webpage. **If a data contributor is submitting data, but does not see the correct or applicable category that they need in one of these tables, they can contact the Makara Database Support Team to request that the category be added.** For example, if the submission includes detection data from an acoustic detector that does not already exist on the Detectors table in Makara, then the data contributor can contact the support team and have the new detector added to the reference table.
 
 |  |  |
-|----|----|
+|------------------------------------|------------------------------------|
 | **Reference Table** | **Definition** |
 | **Analysis Granularity Types** | The granularity of an analysis (e.g., time-binned intervals, call-by-call events, encounter events) |
 | **Analysis Processing Types** | The processing method of an analysis (e.g., real-time, post-processed) |
