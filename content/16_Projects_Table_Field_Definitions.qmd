@@ -3,3 +3,8 @@ title: "16_Projects_Table_Field_Definitions"
 format: html
 ---
 
+## Projects Table Field Definitions
+
+**Filename: projects.csv**
+
+Below are the field definitions for the Projects table, which is an optional table. It is only required if multiple deployments are submitted that the data contributor would like to have grouped together, or if new deployments are submitted that should be grouped with deployments that are already in Makara.
