@@ -1,9 +1,7 @@
 ---
-title: "5_Data_Table_Template_Instructions"
+title: "Data Table Template Instructions"
 format: html
 ---
-
-## Data Table Template Instructions
 
 To submit data and metadata to the Makara database, the information must be organized into template tables. The data template tables and example tables are provided in a downloadable zipped folder on the [Passive Acoustic Reporting System Templates](https://www.fisheries.noaa.gov/resource/document/passive-acoustic-reporting-system-templates) webpage, and are described in more detail below. Some of the tables are required, but do not necessarily need to be submitted at the same time. Other tables are optional, but it is highly recommended that the data contributor fills out any tables that are applicable to their deployment(s). Within each table, there are required and optional (but recommended if applicable) fields. The required tables/fields are the bare minimum of what metadata should be submitted. 
 
