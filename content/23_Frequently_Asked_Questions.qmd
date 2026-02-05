@@ -1,9 +1,7 @@
 ---
-title: "23_Frequently_Asked_Questions"
+title: "Frequently Asked Questions"
 format: html
 ---
-
-## Frequently Asked Questions
 
 ### **Where can I find the submission templates to enter my data/metadata?**
 
