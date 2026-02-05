@@ -3,3 +3,8 @@ title: "15_Devices_Table_Field_Definitions"
 format: html
 ---
 
+## Devices Table Field Definitions
+
+**Filename: devices.csv**
+
+Below are the field definitions for the Devices table, which is an optional table. It is only required if one or more new devices need to be added to Makara.
