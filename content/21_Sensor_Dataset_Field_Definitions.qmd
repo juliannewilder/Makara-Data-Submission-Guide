@@ -1,9 +1,7 @@
 ---
-title: "21_Sensor_Dataset_Field_Definitions"
+title: "Sensor Dataset Field Definitions"
 format: html
 ---
-
-## Sensor Dataset Table Field Definitions
 
 **Filename: sensor_datasets.csv**
 
