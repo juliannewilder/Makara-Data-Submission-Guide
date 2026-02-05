@@ -1,9 +1,7 @@
 ---
-title: "16_Projects_Table_Field_Definitions"
+title: "Projects Table Field Definitions"
 format: html
 ---
-
-## Projects Table Field Definitions
 
 **Filename: projects.csv**
 
