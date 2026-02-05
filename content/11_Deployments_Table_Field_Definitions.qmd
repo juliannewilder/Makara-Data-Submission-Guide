@@ -1,9 +1,7 @@
 ---
-title: "11_Deployments_Table_Field_Definitions"
+title: "Deployments Table Field Definitions"
 format: html
 ---
-
-## Deployments Table Field Definitions
 
 **Filename: deployments.csv**
 
