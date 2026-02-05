@@ -1,9 +1,7 @@
 ---
-title: "9_Data_Type_Formatting_Instructions"
+title: "Data Type Formatting Instructions"
 format: html
 ---
-
-## Data Type Formatting Instructions
 
 Some fields on the data table templates require specific formatting when entering values.
 
