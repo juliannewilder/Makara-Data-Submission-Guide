@@ -1,9 +1,7 @@
 ---
-title: "10_Data_Table_Field_Definitions"
+title: "Data Table Field Definitions"
 format: html
 ---
-
-## Data Table Field Definitions
 
 The following tables contain definitions for each field or column in the data table templates contained in the zipped folder. Each of the following field definitions tables in this document has a number of columns which are defined below in the Column Header Key section, including columns for specifying which fields are required, the type of data that should be entered (e.g., text, integer, URL), and which reference tables to refer to when filling out that field.
 
