@@ -1,8 +1,0 @@
----
-title: "General_Information"
-format: html
----
-
-## General Information
-
-This guide provides data contributors with instructions, field definitions, and examples for how to enter acoustic data and metadata into the template tables and submit them for archiving in the Northeast Fisheries Science Center's (NEFSC) [Makara Database](https://passiveacoustics.fisheries.noaa.gov/). Data that are archived in Makara may also be displayed on the [Passive Acoustic Cetacean Map (PACM)](https://apps-nefsc.fisheries.noaa.gov/pacm/#/), with permission from the data owner(s).
