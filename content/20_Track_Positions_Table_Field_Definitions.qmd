@@ -3,3 +3,8 @@ title: "20_Track_Positions_Table_Field_Definitions"
 format: html
 ---
 
+## Track Positions Table Field Definitions
+
+**Filename: track_positions.csv**
+
+Below are the field definitions for the Track Positions table, which is an optional table. It is only required if one or more mobile deployments are being submitted to Makara.
