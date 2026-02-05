@@ -1,9 +1,7 @@
 ---
-title: "20_Track_Positions_Table_Field_Definitions"
+title: "Track Positions Table Field Definitions"
 format: html
 ---
-
-## Track Positions Table Field Definitions
 
 **Filename: track_positions.csv**
 
