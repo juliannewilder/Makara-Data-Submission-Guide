@@ -3,3 +3,12 @@ title: "23_Frequently_Asked_Questions"
 format: html
 ---
 
+## Frequently Asked Questions
+
+### **Where can I find the submission templates to enter my data/metadata?**
+
+The data template tables and example tables are provided in a downloadable zipped folder on the [Passive Acoustic Reporting System Templates](https://www.fisheries.noaa.gov/resource/document/passive-acoustic-reporting-system-templates) webpage.
+
+### **What happens if I find a mistake in my metadata after I have submitted my templates? For example, you submit your recordings data in local time but realize later you need to change it to UTC.**
+
+Not to worry! You have two options: 1) you can resubmit a whole table (or tables) with the corrected data, or 2) you can go to [Makara](https://passiveacoustics.fisheries.noaa.gov/) directly and correct a field or fields. For example, if you change the site_code in the Sites table, all of the deployments that reference that site_code will automatically be updated to the new site_code.
