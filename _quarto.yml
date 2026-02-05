@@ -13,19 +13,18 @@ book:
   author:
     - name: Jeffrey Walker
       affiliations:
-        - name: NOAA Fisheres
-          department: Northeast Fisheries Science Center
+        - name: NOAA Northeast Fisheries Science Center
+          department: Passive Acoustics Branch
     - name: Julianne Wilder
       affiliations:
-        - name: NOAA Fisheries
-          department: Northeast Fisheries Science Center
+        - name: NOAA Northeast Fisheries Science Center
+          department: Passive Acoustics Branch
     - name: Genevieve Davis
       affiliations:
-        - name: NOAA Fisheries
-          department: Northeast Fisheries Science Center
+        - name: NOAA Northeast Fisheries Science Center
+          department: Passive Acoustics Branch
   chapters:
     - index.qmd
-    - content/1_General_Information.qmd
     - content/2_Document_History_and_Revisions.qmd
     - content/3_Contact_Information_for_the_Makara_Database_Support_Team.qmd
     - content/4_Tips_and_Recommendations.qmd
