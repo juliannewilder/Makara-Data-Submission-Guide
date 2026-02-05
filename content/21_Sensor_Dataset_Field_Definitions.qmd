@@ -3,3 +3,8 @@ title: "21_Sensor_Dataset_Field_Definitions"
 format: html
 ---
 
+## Sensor Dataset Table Field Definitions
+
+**Filename: sensor_datasets.csv**
+
+Below are the field definitions for the Sensor Datasets table, which is an optional table. It is only needed when submitting sensor data such as temperatures for a deployment. Note that a separate dataset must be created for each variable.
