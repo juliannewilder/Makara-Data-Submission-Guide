@@ -1,9 +1,7 @@
 ---
-title: "22_Sensor_Values_Table_Field_Definitions"
+title: "Sensor Values Table Field Definitions"
 format: html
 ---
-
-## Sensor Values Table Field Definitions
 
 **Filename: sensor_values.csv**
 
