@@ -1,14 +1,12 @@
 ---
-title: "7_Optional_Data_Tables"
+title: "Optional Data Tables"
 format: html
 ---
-
-## Optional Data Tables (Recommended/Required if Applicable)
 
 The following tables are optional for any data submission as long as the desired categories already exist in the database. For each table, the data needs to be submitted only once. For example, if a device has already been submitted with a deployment, and then referenced by a deployment that is submitted later, then the Device table including that device does not need to be included in the second submission as it will already exist in Makara.
 
 |  |  |  |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | **Data Table** | **Definition** | **If/When to Submit** |
 | **Devices** | A specific piece of equipment used as part of a deployment (e.g., platforms, hydrophones, recorders, sensors, acoustic releases, gliders, arrays) | If there are new devices that are not already in Makara |
 | **Projects** | A group of deployments | If multiple deployments are submitted that the data contributor would like to have grouped together, or if new deployments are submitted that should be grouped with deployments that are already in Makara. If a project was already created with previously submitted deployment(s) and there are new deployments to be added to that project, then another Project table does not need to be submitted. |
