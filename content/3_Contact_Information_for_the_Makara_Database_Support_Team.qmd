@@ -1,8 +1,6 @@
 ---
-title: "Contact_Information_for_the_Makara_Database_Support_Team"
+title: "Contact Information for the Makara Database Support Team"
 format: html
 ---
-
-## Contact Information for the Makara Database Support Team
 
 If you have questions or issues regarding your data submission, please contact [nmfs.nec.pamdata\@noaa.gov](mailto:nmfs.nec.pacmdata@noaa.gov).
