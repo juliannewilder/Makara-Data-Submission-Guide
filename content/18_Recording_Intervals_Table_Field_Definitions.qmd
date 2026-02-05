@@ -3,3 +3,8 @@ title: "18_Recording_Intervals_Table_Field_Definitions"
 format: html
 ---
 
+## Recording Intervals Table Field Definitions
+
+**Filename: recording_intervals.csv**
+
+Below are the field definitions for the Recording Intervals table, which is an optional table. It is only required if one or more recordings have periods of compromised data (duty cycling is accounted for in the Recordings table, not the Recording Intervals table). For an example of a recording_intervals table that is filled out, see [Example #1](https://docs.google.com/document/d/1VDhnr32qz6CCZEFEneOjSFs1QwamMF5LCqdsc4ok6KU/edit?tab=t.0#heading=h.guv6c7qokep7). **UPDATE LINK**
