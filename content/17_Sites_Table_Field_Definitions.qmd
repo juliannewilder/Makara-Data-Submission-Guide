@@ -3,3 +3,8 @@ title: "17_Sites_Table_Field_Definitions"
 format: html
 ---
 
+## Sites Table Field Definitions
+
+**Filename: sites.csv**
+
+Below are the field definitions for the Sites table, which is an optional table. It is only required if one or more new deployment sites need to be added to Makara.
