@@ -1,9 +1,7 @@
 ---
-title: "19_Tracks_Table_Field_Definitions"
+title: "Tracks Table Field Definitions"
 format: html
 ---
-
-## Tracks Table Field Definitions
 
 **Filename: tracks.csv**
 
