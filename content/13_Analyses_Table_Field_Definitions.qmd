@@ -1,9 +1,7 @@
 ---
-title: "13_Analyses_Table_Field_Definitions"
+title: "Analyses Table Field Definitions"
 format: html
 ---
-
-## Analyses Table Field Definitions
 
 **Filename: analyses.csv**
 
