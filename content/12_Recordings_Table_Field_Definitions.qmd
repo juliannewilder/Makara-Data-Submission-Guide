@@ -3,3 +3,8 @@ title: "12_Recordings_Table_Field_Definitions"
 format: html
 ---
 
+## Recordings Table Field Definitions
+
+**Filename: recordings.csv**
+
+Below are the field definitions for the Recordings table, which is a primary table.
