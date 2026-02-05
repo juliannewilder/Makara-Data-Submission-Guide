@@ -1,9 +1,7 @@
 ---
-title: "4_Tips_and_Recommendations"
+title: "Tips and Recommendations"
 format: html
 ---
-
-## Tips and Recommendations
 
 -   Timezones/Timestamps: All timestamps that are entered into the data submission templates should include the timezone (even if they are in UTC; e.g., 2023-10-12T18:09:05+0000). The NEFSC generally recommends that all recordings are made in UTC. Other timezones are okay, so long as the timezone information is included within the timestamp (e.g., 2023-10-12T18:09:05+0500 to indicate that the audio was recorded in Eastern Standard Time).
 
